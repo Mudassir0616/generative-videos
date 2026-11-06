@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Figtree"; src: url("assets/fonts/Figtree.ttf") format("truetype"); font-weight: 300 900; font-display: block; }
+      @font-face { font-family: "Serif"; src: url("assets/fonts/InstrumentSerif-Italic.ttf") format("truetype"); font-style: italic; font-display: block; }
+      @font-face { font-family: "Michroma"; src: url("assets/fonts/Michroma.ttf") format("truetype"); font-display: block; }
+      :root { --m: 90px; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: "Figtree", sans-serif; }
+
+      .clip { position: absolute; inset: 0; overflow: hidden; }
+      .w { background: #fff; color: #000; }
+      .b { background: #000; color: #fff; }
+      .stage { position: absolute; inset: 0; transform-origin: 50% 50%; }
+      .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 var(--m); }
+
+      .word { font-weight: 800; letter-spacing: -0.045em; line-height: 0.92; white-space: nowrap; }
+      .small { font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+      .serif { font-family: "Serif", serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+      .ch { display: inline-block; white-space: pre; }
+      .line { display: block; overflow: hidden; padding: 0.08em 0.04em 0.14em; margin: -0.08em -0.04em -0.14em; }
+      .line > .in { display: inline-block; }
+
+      /* decoration (all currentColor, so it flips with the background) */
+      .crop { position: absolute; width: 46px; height: 46px; opacity: 0.55; }
+      .crop.tl { left: 44px; top: 44px; border-left: 3px solid; border-top: 3px solid; }
+      .crop.tr { right: 44px; top: 44px; border-right: 3px solid; border-top: 3px solid; }
+      .crop.bl { left: 44px; bottom: 44px; border-left: 3px solid; border-bottom: 3px solid; }
+      .crop.br { right: 44px; bottom: 44px; border-right: 3px solid; border-bottom: 3px solid; }
+      .note { position: absolute; font-size: 22px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; opacity: 0.5; }
+      .note.bl { left: var(--m); bottom: 92px; }
+      .note.br { right: var(--m); bottom: 92px; }
+      .note.tl { left: var(--m); top: 100px; }
+      .note.tr { right: var(--m); top: 100px; }
+      .dial { position: absolute; left: 50%; top: 50%; width: 1500px; height: 1500px; margin: -750px 0 0 -750px; opacity: 0.13; }
+      .bigword { position: absolute; left: 0; bottom: -70px; font-size: 460px; font-weight: 900; letter-spacing: -0.06em; white-space: nowrap; opacity: 0.07; line-height: 1; }
+
+      /* S4 graph */
+      #s4 svg.graph { position: absolute; left: 90px; top: 760px; width: 900px; height: 820px; }
+
+      /* services */
+      .svc .top { position: absolute; left: var(--m); right: var(--m); top: 220px; display: flex; justify-content: space-between; font-size: 30px; font-weight: 700; letter-spacing: 0.26em; }
+      .svc .rule { position: absolute; left: var(--m); right: var(--m); top: 280px; height: 3px; background: currentColor; transform-origin: left center; }
+      .svc .num { position: absolute; left: var(--m); top: 540px; font-size: 230px; line-height: 1; }
+      .svc .head { position: absolute; left: var(--m); top: 830px; font-size: 128px; }
+      .svc .dial { left: 830px; top: 640px; width: 1100px; height: 1100px; margin: -550px 0 0 -550px; opacity: 0.16; }
+      .chip { display: inline-block; border: 3px solid currentColor; border-radius: 999px; padding: 18px 38px 20px; font-size: 40px; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
+      .chip.fill.onb { background: #fff; color: #000; border-color: #fff; }
+      .chip.fill.onw { background: #000; color: #fff; border-color: #000; }
+      .svc .chipwrap { position: absolute; left: var(--m); top: 1410px; }
+
+      /* why */
+      #why .ring { position: absolute; border-radius: 50%; border: 70px solid #fff; opacity: 0.07; }
+      #why .hdr { position: absolute; left: var(--m); top: 420px; }
+      #why .chips { position: absolute; left: var(--m); right: var(--m); top: 800px; display: flex; flex-direction: column; align-items: flex-start; gap: 26px; }
+      #why .chip { font-size: 46px; padding: 22px 44px 24px; }
+
+      /* end card */
+      #end .tile { position: absolute; left: 50%; top: 400px; width: 240px; height: 240px; margin-left: -120px; border-radius: 58px; background: #fff; display: flex; align-items: center; justify-content: center; }
+      #end .dial { top: 520px; width: 560px; height: 560px; margin: -280px 0 0 -280px; opacity: 0.3; }
+      #end .brand { position: absolute; left: 0; right: 0; top: 870px; text-align: center; font-family: "Michroma"; font-size: 64px; letter-spacing: 0.07em; -webkit-text-stroke: 0.07em currentColor; white-space: nowrap; }
+      #end .brule { position: absolute; left: 50%; top: 1000px; width: 160px; margin-left: -80px; height: 4px; background: #fff; }
+      #end .tag { position: absolute; left: 0; right: 0; top: 1050px; text-align: center; font-size: 54px; font-weight: 700; letter-spacing: -0.02em; }
+      #end .cta { position: absolute; left: 0; right: 0; top: 1215px; text-align: center; }
+      #end .cta .chip { font-size: 42px; }
+      #end .contact { position: absolute; left: 0; right: 0; top: 1470px; text-align: center; font-size: 46px; font-weight: 700; line-height: 1.5; letter-spacing: -0.01em; }
+      #end .contact .city { font-size: 30px; letter-spacing: 0.06em; opacity: 0.55; margin-top: 18px; }
+
+      #grain { position: absolute; inset: -64px; background: url("assets/grain.png") repeat; opacity: 0.55; pointer-events: none; z-index: 50; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="40" data-width="1080" data-height="1920">
+
+      <!-- ===== HOOK ===== -->
+      <section id="s1" class="clip w" data-start="0" data-duration="0.75" data-track-index="0"><div class="stage">
+        <div class="center"><div class="word fx-blur" style="font-size:205px">Growing</div></div>
+      </div></section>
+
+      <section id="s2" class="clip b" data-start="0.75" data-duration="1" data-track-index="0"><div class="stage">
+        <div class="center"><div class="word fx-pop" style="font-size:330px">fast?</div></div>
+      </div></section>
+
+      <section id="s3" class="clip w" data-start="1.75" data-duration="1.75" data-track-index="0"><div class="stage">
+        <div class="center">
+          <div class="small fx-type" style="font-size:96px; margin-bottom:10px">But your</div>
+          <div class="word fx-blur" style="font-size:250px">IT costs</div>
+        </div>
+      </div></section>
+
+      <section id="s4" class="clip b" data-start="3.5" data-duration="2" data-track-index="0"><div class="stage">
+        <svg class="graph" viewBox="0 0 900 820">
+          <g stroke="#fff" stroke-opacity="0.18" stroke-width="2">
+            <line x1="0" y1="164" x2="900" y2="164"/><line x1="0" y1="328" x2="900" y2="328"/>
+            <line x1="0" y1="492" x2="900" y2="492"/><line x1="0" y1="656" x2="900" y2="656"/>
+            <line x1="180" y1="0" x2="180" y2="820"/><line x1="360" y1="0" x2="360" y2="820"/>
+            <line x1="540" y1="0" x2="540" y2="820"/><line x1="720" y1="0" x2="720" y2="820"/>
+          </g>
+          <polyline class="gline" points="0,780 120,700 220,730 340,560 450,600 560,400 660,430 780,180 880,40" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle class="gdot" cx="880" cy="40" r="26" fill="#fff"/>
+        </svg>
+        <div style="position:absolute; left:var(--m); top:330px">
+          <div class="word" style="font-size:200px"><span class="line"><span class="in">keep</span></span><span class="line"><span class="in key">climbing.</span></span></div>
+        </div>
+      </div></section>
+
+      <section id="s5" class="clip w" data-start="5.5" data-duration="0.75" data-track-index="0"><div class="stage">
+        <div class="center"><div class="word fx-warp" style="font-size:168px">Overpriced.</div></div>
+      </div></section>
+
+      <section id="s6" class="clip b" data-start="6.25" data-duration="0.75" data-track-index="0"><div class="stage">
+        <div class="center"><div class="word fx-blur" style="font-size:176px">Unreliable.</div></div>
+      </div></section>
+
+      <section id="s7" class="clip w" data-start="7" data-duration="0.75" data-track-index="0"><div class="stage">
+        <div class="center"><div class="word fx-pop" style="font-size:330px">Slow.</div></div>
+      </div></section>
+
+      <section id="s8" class="clip b" data-start="7.75" data-duration="1.25" data-track-index="0"><div class="stage">
+        <div class="center">
+          <div class="small fx-blur" style="font-size:110px">Sound</div>
+          <div class="serif fx-warp sweep" style="font-size:250px; line-height:1; margin-top:-10px">familiar?</div>
+        </div>
+      </div></section>
+
+      <!-- ===== TURN ===== -->
+      <section id="s9" class="clip w" data-start="9" data-duration="2.5" data-track-index="0"><div class="stage">
+        <div class="center">
+          <div class="small fx-type" style="font-size:84px; margin-bottom:40px">Meet</div>
+          <div class="brandword" style="font-family:Michroma; font-size:66px; letter-spacing:0.07em; -webkit-text-stroke:0.07em currentColor; white-space:nowrap">ZELECTRONICS</div>
+          <div class="s9rule" style="width:300px; height:4px; background:#000; margin-top:56px"></div>
+        </div>
+      </div></section>
+
+      <section id="s10" class="clip b" data-start="11.5" data-duration="2.25" data-track-index="0"><div class="stage">
+        <div class="center" style="align-items:flex-start; text-align:left">
+          <div class="word" style="font-size:190px"><span class="line"><span class="in">Smarter</span></span><span class="line"><span class="in key">IT for</span></span></div>
+          <div class="serif" style="font-size:130px; line-height:1.05; margin-top:20px"><span class="line"><span class="in">startups &amp; SMEs.</span></span></div>
+        </div>
+      </div></section>
+
+      <!-- ===== SERVICES (built by JS) ===== -->
+      <div id="services"></div>
+
+      <!-- ===== WHY ===== -->
+      <section id="why" class="clip b" data-start="26.25" data-duration="6" data-track-index="0"><div class="stage">
+        <div class="ring r1" style="width:1100px; height:1100px; left:-420px; top:-260px"></div>
+        <div class="ring r2" style="width:900px; height:900px; left:560px; top:1240px"></div>
+        <div class="hdr">
+          <div class="small fx-blur" style="font-size:96px">Why teams</div>
+          <div class="serif fx-warp" style="font-size:190px; line-height:1">choose us.</div>
+        </div>
+        <div class="chips">
+          <span class="chip fill onb">Lower total cost of ownership</span>
+          <span class="chip">Warranty &amp; SLA-backed support</span>
+          <span class="chip fill onb">Fast turnaround</span>
+          <span class="chip">Local Mumbai presence</span>
+          <span class="chip fill onb">Honest advice. No overselling.</span>
+        </div>
+      </div></section>
+
+      <!-- ===== FLASH ===== -->
+      <section id="f1" class="clip w" data-start="32.25" data-duration="0.75" data-track-index="0"><div class="stage">
+        <div class="center"><div class="word fx-pop" style="font-size:176px">Powerful.</div></div>
+      </div></section>
+      <section id="f2" class="clip b" data-start="33" data-duration="0.75" data-track-index="0"><div class="stage">
+        <div class="center"><div class="word fx-blur" style="font-size:168px">Affordable.</div></div>
+      </div></section>
+      <section id="f3" class="clip w" data-start="33.75" data-duration="0.75" data-track-index="0"><div class="stage">
+        <div class="center"><div class="serif fx-warp" style="font-size:200px; line-height:1">Hassle-free.</div></div>
+      </div></section>
+
+      <!-- ===== END CARD ===== -->
+      <section id="end" class="clip b" data-start="34.5" data-duration="5.5" data-track-index="0"><div class="stage">
+        <div class="tile"><svg class="zelogo" viewBox="0 0 300 143" width="150" height="72" aria-label="ZE"><path fill="#000" d="M0,0 H130 A13,13 0 0 1 143,13 V29 H133 L48,114 H143 V143 H13 A13,13 0 0 1 0,130 V114 H9 L94,29 H0 Z"/><path fill="#000" d="M182,0 H300 V29 H186 V57 H300 V86 H186 V114 H300 V143 H182 A25,25 0 0 1 157,118 V25 A25,25 0 0 1 182,0 Z"/></svg></div>
+        <div class="brand"></div>
+        <div class="brule"></div>
+        <div class="tag"><span class="line"><span class="in">Your Trusted Hardware Partner</span></span></div>
+        <div class="cta"><span class="chip fill onb">Free consultation &amp; bulk pricing</span></div>
+        <div class="contact">
+          <div><span class="line"><span class="in">zelectronics.co</span></span></div>
+          <div><span class="line"><span class="in">+91 84518 64754</span></span></div>
+          <div class="city"><span class="line"><span class="in">Mumbai, India</span></span></div>
+        </div>
+      </div></section>
+
+      <div id="grain" class="clip" data-start="0" data-duration="40" data-track-index="2"></div>
+      <audio id="mix" src="assets/audio.wav" data-start="0" data-duration="40" data-volume="0.7" data-track-index="1"></audio>
+    </div>
+
+    <script>
+      const SVC = [
+        { t: 13.75, bg: "w", word: "REFURB", head: ["Refurbished", "laptops &amp;", "desktops."], chip: "Tested &amp; certified" },
+        { t: 16.25, bg: "b", word: "CUSTOM", head: ["Custom", "PC builds."], chip: "For developers, designers &amp; teams" },
+        { t: 18.75, bg: "w", word: "AMC", head: ["Annual", "maintenance", "contracts."], chip: "AMC" },
+        { t: 21.25, bg: "b", word: "NETWORK", head: ["Office IT &amp;", "network", "setup."], chip: "For new &amp; expanding offices" },
+        { t: 23.75, bg: "w", word: "SUPPORT", head: ["On-site", "support."], chip: "Priority servicing" },
+      ];
+      const DUR = 2.5;
+
+      // ---------- build markup (deterministic) ----------
+      const DIAL_SVG = (() => {
+        let s = '<svg viewBox="0 0 1000 1000" width="100%" height="100%" fill="none" stroke="currentColor">';
+        s += '<circle cx="500" cy="500" r="490" stroke-width="3"/><circle cx="500" cy="500" r="400" stroke-width="2"/>';
+        for (let i = 0; i < 120; i++) {
+          const a = (i / 120) * Math.PI * 2, long = i % 10 === 0, r1 = 490, r2 = long ? 440 : 466;
+          s += `<line x1="${500 + r1 * Math.cos(a)}" y1="${500 + r1 * Math.sin(a)}" x2="${500 + r2 * Math.cos(a)}" y2="${500 + r2 * Math.sin(a)}" stroke-width="${long ? 6 : 2}"/>`;
+        }
+        return s + "</svg>";
+      })();
+
+      const svcHost = document.getElementById("services");
+      SVC.forEach((s, i) => {
+        const sec = document.createElement("section");
+        sec.id = `svc${i + 1}`;
+        sec.className = `clip svc ${s.bg}`;
+        sec.dataset.start = s.t; sec.dataset.duration = DUR; sec.dataset.trackIndex = 0;
+        sec.innerHTML = `<div class="stage">
+          <div class="dial">${DIAL_SVG}</div>
+          <div class="bigword" data-layout-allow-overflow data-layout-ignore>${s.word}</div>
+          <div class="top"><span class="line"><span class="in">WHAT WE DO</span></span><span class="line"><span class="in">0${i + 1} / 05</span></span></div>
+          <div class="rule"></div>
+          <div class="num serif fx-blur">0${i + 1}</div>
+          <div class="head word">${s.head.map((h, j) => `<span class="line"><span class="in${j === s.head.length - 1 ? " key" : ""}">${h}</span></span>`).join("")}</div>
+          <div class="chipwrap"><span class="chip ${i % 2 ? "" : ""}">${s.chip}</span></div>
+        </div>`;
+        svcHost.appendChild(sec);
+      });
+
+      // Corner crop marks + notes on every scene; dials on the single-word scenes.
+      const NOTES = ["IT FOR GROWING TEAMS", "MUMBAI · IN"];
+      document.querySelectorAll("section.clip").forEach((sec, i) => {
+        const st = sec.querySelector(".stage");
+        ["tl", "tr", "bl", "br"].forEach((c) => { const d = document.createElement("div"); d.className = `crop ${c}`; sec.appendChild(d); });
+        if (!sec.classList.contains("svc") && sec.id !== "end") {
+          sec.insertAdjacentHTML("beforeend", `<div class="note bl" data-layout-ignore>${NOTES[0]}</div><div class="note br" data-layout-ignore>SC.${String(i + 1).padStart(2, "0")}</div>`);
+        }
+        if (/^(s[1-35-9]|s10|f\d)$/.test(sec.id)) st.insertAdjacentHTML("afterbegin", `<div class="dial">${DIAL_SVG}</div>`);
+      });
+      document.querySelector("#end .stage").insertAdjacentHTML("afterbegin", `<div class="dial">${DIAL_SVG}</div>`);
+      document.querySelector("#end").insertAdjacentHTML("beforeend", `<div class="note tl" data-layout-ignore>${NOTES[0]}</div><div class="note tr" data-layout-ignore>${NOTES[1]}</div>`);
+
+      // Split helpers
+      function splitChars(el) {
+        const txt = el.textContent; el.textContent = "";
+        [...txt].forEach((c) => { const s = document.createElement("span"); s.className = "ch"; s.textContent = c; el.appendChild(s); });
+        return el.querySelectorAll(".ch");
+      }
+      document.querySelectorAll(".fx-warp, .fx-type, .brandword").forEach(splitChars);
+      const brand = document.querySelector("#end .brand");
+      brand.textContent = "ZELECTRONICS"; splitChars(brand);
+
+      // ---------- timeline ----------
+      const tl = gsap.timeline({ paused: true });
+      const scenes = [...document.querySelectorAll("section.clip")];
+
+      gsap.set(".line > .in", { yPercent: 115 });
+
+      // Camera punch on every cut + dial rotation continuous in absolute time.
+      scenes.forEach((sec) => {
+        const s = +sec.dataset.start, d = +sec.dataset.duration;
+        tl.fromTo(sec.querySelector(".stage"), { scale: 1.07 }, { scale: 1, duration: 0.4, ease: "expo.out" }, s);
+        sec.querySelectorAll(".dial").forEach((dl) => tl.fromTo(dl, { rotation: s * 9 }, { rotation: (s + d) * 9, ease: "none", duration: d }, s));
+      });
+
+      function blurIn(el, t) {
+        tl.fromTo(el, { scale: 1.35, filter: "blur(24px)", opacity: 0 }, { scale: 1, filter: "blur(0px)", opacity: 1, duration: 0.32, ease: "expo.out" }, t);
+      }
+      function pop(el, t) {
+        tl.fromTo(el, { scale: 0.45, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.34, ease: "back.out(2.6)" }, t);
+      }
+      function warp(el, t) {
+        const chs = el.querySelectorAll(".ch");
+        tl.fromTo(chs,
+          { yPercent: (i) => (i % 2 ? 70 : -70), rotation: (i) => (i % 2 ? 18 : -18), scaleY: 1.8, filter: "blur(10px)", opacity: 0 },
+          { yPercent: 0, rotation: 0, scaleY: 1, filter: "blur(0px)", opacity: 1, duration: 0.22, ease: "expo.out", stagger: 0.011 }, t);
+      }
+      function type(el, t, step = 0.045) {
+        const chs = el.querySelectorAll(".ch");
+        tl.set(chs, { opacity: 0 }, 0);
+        chs.forEach((c, i) => tl.set(c, { opacity: 1 }, t + i * step));
+      }
+      function rise(sel, t, gap = 0.1) { riseEls(document.querySelectorAll(sel), t, gap); }
+      function riseEls(els, t, gap = 0.1) {
+        els.forEach((el, i) => {
+          const key = el.classList.contains("key");
+          tl.to(el, { yPercent: 0, duration: key ? 0.42 : 0.34, ease: key ? "back.out(2.2)" : "expo.out" }, t + i * gap);
+        });
+      }
+      const auto = (sel, t) => {
+        const el = document.querySelector(sel);
+        if (el.classList.contains("fx-blur")) blurIn(el, t);
+        else if (el.classList.contains("fx-pop")) pop(el, t);
+        else if (el.classList.contains("fx-warp")) warp(el, t);
+        else if (el.classList.contains("fx-type")) type(el, t);
+      };
+
+      // HOOK
+      tl.fromTo("#s1 .word", { scale: 1.1 }, { scale: 1, duration: 0.5, ease: "expo.out" }, 0);
+      auto("#s2 .word", 0.75);
+      auto("#s3 .small", 1.75); auto("#s3 .word", 2.1);
+      rise("#s4 .line .in", 3.55, 0.2);
+      tl.fromTo("#s4 .gline", { strokeDasharray: 1600, strokeDashoffset: 1600 }, { strokeDashoffset: 0, duration: 1.4, ease: "power2.inOut" }, 3.6);
+      tl.fromTo("#s4 .gdot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, 4.9);
+      auto("#s5 .word", 5.5);
+      auto("#s6 .word", 6.25);
+      auto("#s7 .word", 7.0);
+      auto("#s8 .small", 7.75); auto("#s8 .serif", 7.95);
+
+      // TURN
+      type(document.querySelector("#s9 .small"), 9.05, 0.06);
+      tl.fromTo("#s9 .brandword .ch",
+        { opacity: 0, filter: "blur(14px)", x: (i) => (i - 5.5) * 60 },
+        { opacity: 1, filter: "blur(0px)", x: 0, duration: 0.6, ease: "expo.out", stagger: 0.025 }, 9.45);
+      tl.fromTo("#s9 .s9rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 10.0);
+      rise("#s10 .word .in", 11.52, 0.16);
+      rise("#s10 .serif .in", 11.9);
+
+      // SERVICES
+      document.querySelectorAll("section.svc").forEach((sec, i) => {
+        const t = SVC[i].t;
+        const q = (s) => sec.querySelector(s), qa = (s) => sec.querySelectorAll(s);
+        tl.fromTo(q(".rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, t);
+        riseEls(qa(".top .in"), t + 0.02, 0.05);
+        blurIn(q(".num"), t + 0.04);
+        riseEls(qa(".head .in"), t + 0.12, 0.1);
+        pop(q(".chip"), t + 0.45);
+        tl.fromTo(q(".bigword"), { x: 80 }, { x: -340, duration: DUR, ease: "none" }, t);
+      });
+
+      // WHY
+      auto("#why .small", 26.28); auto("#why .serif", 26.5);
+      document.querySelectorAll("#why .chips .chip").forEach((c, i) => {
+        tl.fromTo(c, { x: -120, opacity: 0, scale: 0.85, transformOrigin: "0% 50%" }, { x: 0, opacity: 1, scale: 1, duration: 0.36, ease: "back.out(2)" }, 27.0 + i * 0.55);
+      });
+      tl.fromTo("#why .r1", { x: 0, y: 0 }, { x: 200, y: 150, duration: 6, ease: "none" }, 26.25);
+      tl.fromTo("#why .r2", { x: 0, y: 0 }, { x: -250, y: -200, duration: 6, ease: "none" }, 26.25);
+
+      // FLASH
+      auto("#f1 .word", 32.25);
+      auto("#f2 .word", 33.0);
+      auto("#f3 .serif", 33.75);
+
+      // END CARD
+      tl.fromTo("#end .tile", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.55, ease: "back.out(2.4)" }, 34.57);
+      tl.fromTo("#end .brand .ch",
+        { yPercent: (i) => (i % 2 ? 90 : -90), scaleY: 1.8, filter: "blur(10px)", opacity: 0 },
+        { yPercent: 0, scaleY: 1, filter: "blur(0px)", opacity: 1, duration: 0.42, ease: "expo.out", stagger: 0.045 }, 34.95);
+      tl.fromTo("#end .brule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 35.6);
+      rise("#end .tag .in", 35.7);
+      pop(document.querySelector("#end .cta .chip"), 36.05);
+      rise("#end .contact .in", 36.35, 0.12);
+
+      // Grain: stepped jitter so specks shimmer like film dust.
+      tl.fromTo("#grain", { x: 0, y: 0 }, { x: 80, y: -54, duration: 40, ease: "steps(320)" }, 0);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

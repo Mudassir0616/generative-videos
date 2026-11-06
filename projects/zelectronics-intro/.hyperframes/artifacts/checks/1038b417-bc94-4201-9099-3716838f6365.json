@@ -1,0 +1,925 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 16,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 0 has 15 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s1\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s1",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s2\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s2",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s3\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s3",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s4\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s4",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s5\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s5",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s6\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s6",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s6\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s7\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s7",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s7\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s8\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s8",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s8\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s9\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s9",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s9\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s10\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s10",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s10\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"why\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#why",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"why\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"f1\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#f1",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"f1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"f2\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#f2",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"f2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"f3\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#f3",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"f3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"end\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#end",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-intro-v2/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"end\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 13,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 5,
+        "selector": "#s7 > div:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -37.8,
+          "top": -67.2,
+          "right": 1117.8,
+          "bottom": 1987.2,
+          "width": 1155.6,
+          "height": 2054.4
+        },
+        "containerSelector": "#s7",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 37.8,
+          "right": 37.8,
+          "top": 67.2,
+          "bottom": 67.2
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -37.8,
+          "y": -67.2,
+          "width": 1155.6,
+          "height": 2054.4
+        },
+        "firstSeen": 5,
+        "lastSeen": 5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          5
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#svc1 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(1)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 819.77,
+          "right": 758.67,
+          "bottom": 965.66,
+          "width": 673.78,
+          "height": 145.89
+        },
+        "containerSelector": "#svc1 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 753.56,
+          "bottom": 1203.72,
+          "width": 663.56,
+          "height": 373.72
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 819.77,
+          "width": 673.78,
+          "height": 145.89
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#svc1 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(2)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 947.75,
+          "right": 758.67,
+          "bottom": 1093.64,
+          "width": 673.78,
+          "height": 145.89
+        },
+        "containerSelector": "#svc1 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 753.56,
+          "bottom": 1203.72,
+          "width": 663.56,
+          "height": 373.72
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 947.75,
+          "width": 673.78,
+          "height": 145.89
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 11.667,
+        "selector": "#svc1 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(3)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 1075.73,
+          "right": 758.67,
+          "bottom": 1221.63,
+          "width": 673.78,
+          "height": 145.89
+        },
+        "containerSelector": "#svc1 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 753.56,
+          "bottom": 1203.72,
+          "width": 663.56,
+          "height": 373.72
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 1075.73,
+          "width": 673.78,
+          "height": 145.89
+        },
+        "firstSeen": 11.667,
+        "lastSeen": 11.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          11.667
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 15,
+        "selector": "#svc3 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(1)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 819.77,
+          "right": 803.08,
+          "bottom": 965.66,
+          "width": 718.19,
+          "height": 145.89
+        },
+        "containerSelector": "#svc3 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 797.97,
+          "bottom": 1203.72,
+          "width": 707.97,
+          "height": 373.72
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 819.77,
+          "width": 718.19,
+          "height": 145.89
+        },
+        "firstSeen": 15,
+        "lastSeen": 15,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          15
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 15,
+        "selector": "#svc3 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(2)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 947.75,
+          "right": 803.08,
+          "bottom": 1093.64,
+          "width": 718.19,
+          "height": 145.89
+        },
+        "containerSelector": "#svc3 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 797.97,
+          "bottom": 1203.72,
+          "width": 707.97,
+          "height": 373.72
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 947.75,
+          "width": 718.19,
+          "height": 145.89
+        },
+        "firstSeen": 15,
+        "lastSeen": 15,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          15
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 15,
+        "selector": "#svc3 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(3)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 1075.73,
+          "right": 803.08,
+          "bottom": 1221.63,
+          "width": 718.19,
+          "height": 145.89
+        },
+        "containerSelector": "#svc3 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 797.97,
+          "bottom": 1203.72,
+          "width": 707.97,
+          "height": 373.72
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 1075.73,
+          "width": 718.19,
+          "height": 145.89
+        },
+        "firstSeen": 15,
+        "lastSeen": 15,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          15
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#svc5 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(1)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 819.77,
+          "right": 551.19,
+          "bottom": 965.66,
+          "width": 466.3,
+          "height": 145.89
+        },
+        "containerSelector": "#svc5 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 546.08,
+          "bottom": 1075.73,
+          "width": 456.08,
+          "height": 245.73
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 819.77,
+          "width": 466.3,
+          "height": 145.89
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 18.333,
+        "selector": "#svc5 > div:nth-of-type(1) > div:nth-of-type(6) > span:nth-of-type(2)",
+        "message": "Nowrap text is wider than its container.",
+        "rect": {
+          "left": 84.89,
+          "top": 947.75,
+          "right": 551.19,
+          "bottom": 1093.64,
+          "width": 466.3,
+          "height": 145.89
+        },
+        "containerSelector": "#svc5 > div:nth-of-type(1) > div:nth-of-type(6)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 90,
+          "top": 830,
+          "right": 546.08,
+          "bottom": 1075.73,
+          "width": 456.08,
+          "height": 245.73
+        },
+        "overflow": {
+          "left": 5.11,
+          "right": 5.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 84.89,
+          "y": 947.75,
+          "width": 466.3,
+          "height": 145.89
+        },
+        "firstSeen": 18.333,
+        "lastSeen": 18.333,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.333
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 25,
+        "selector": "div.tag > span:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 170.61,
+          "top": 1049.79,
+          "right": 909.39,
+          "bottom": 1114.83,
+          "width": 738.78,
+          "height": 65.03
+        },
+        "containerSelector": "div.tag > span:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -2.43,
+          "top": 970.69,
+          "right": 1082.43,
+          "bottom": 1047.59,
+          "width": 1084.85,
+          "height": 76.9
+        },
+        "overflow": {
+          "bottom": 67.24
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 170.61,
+          "y": 1049.79,
+          "width": 738.78,
+          "height": 65.03
+        },
+        "firstSeen": 25,
+        "lastSeen": 25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          25
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 25,
+        "selector": "div.contact > div:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 383.37,
+          "top": 1519.63,
+          "right": 696.61,
+          "bottom": 1588.66,
+          "width": 313.23,
+          "height": 69.03
+        },
+        "containerSelector": "div.contact > div:nth-of-type(1) > span:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -2.1,
+          "top": 1436.57,
+          "right": 1082.1,
+          "bottom": 1515.72,
+          "width": 1084.2,
+          "height": 79.15
+        },
+        "overflow": {
+          "bottom": 72.94
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 383.37,
+          "y": 1519.63,
+          "width": 313.23,
+          "height": 69.03
+        },
+        "firstSeen": 25,
+        "lastSeen": 25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          25
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 25,
+        "selector": "div.contact > div:nth-of-type(2) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 360.43,
+          "top": 1592.34,
+          "right": 719.56,
+          "bottom": 1661.37,
+          "width": 359.13,
+          "height": 69.03
+        },
+        "containerSelector": "div.contact > div:nth-of-type(2) > span:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -2.1,
+          "top": 1509.27,
+          "right": 1082.1,
+          "bottom": 1588.42,
+          "width": 1084.2,
+          "height": 79.15
+        },
+        "overflow": {
+          "bottom": 72.95
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 360.43,
+          "y": 1592.34,
+          "width": 359.13,
+          "height": 69.03
+        },
+        "firstSeen": 25,
+        "lastSeen": 25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          25
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 25,
+        "selector": "div.city > span:nth-of-type(1) > span:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 384.97,
+          "top": 1654.16,
+          "right": 695.03,
+          "bottom": 1699.18,
+          "width": 310.06,
+          "height": 45.02
+        },
+        "containerSelector": "div.city > span:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -1.46,
+          "top": 1599.99,
+          "right": 1081.46,
+          "bottom": 1651.6,
+          "width": 1082.92,
+          "height": 51.6
+        },
+        "overflow": {
+          "bottom": 47.58
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 384.97,
+          "y": 1654.16,
+          "width": 310.06,
+          "height": 45.02
+        },
+        "firstSeen": 25,
+        "lastSeen": 25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          25
+        ]
+      }
+    ],
+    "duration": 30,
+    "samples": [
+      1.667,
+      5,
+      8.333,
+      11.667,
+      15,
+      18.333,
+      21.667,
+      25,
+      28.333
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 13,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.667,
+      8.333,
+      15,
+      21.667,
+      28.333
+    ],
+    "checked": 63,
+    "passed": 63
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 240
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
