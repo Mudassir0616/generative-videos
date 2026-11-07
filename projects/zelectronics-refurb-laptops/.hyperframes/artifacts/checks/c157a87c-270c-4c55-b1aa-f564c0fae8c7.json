@@ -1,0 +1,2147 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 15,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "gsap_repeated_fromto_without_baseline",
+        "severity": "warning",
+        "message": "4 tl.fromTo() calls target \".ch\" with no stable baseline. The last-authored fromTo \"from\" values become the element's resting state for any seek before the first tween actually runs, because GSAP applies fromTo from-values at authoring time (immediateRender), not at tween position.",
+        "selector": ".ch",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add `immediateRender: false` to every fromTo except the earliest-positioned one (at 1.24s), so pre-first-tween seeks keep its \"from\" values. A hiding `tl.set(..., 0)` baseline trips gsap_timeline_set_initial_hide, and a `gsap.set` authored before the fromTo calls is overwritten by them."
+      },
+      {
+        "code": "svg_round_cap_hidden_dash",
+        "severity": "warning",
+        "message": "<circle> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Make the gap longer than the path (stroke-dasharray \"1 1.2\" with stroke-dashoffset 1.1), or keep the element visibility:hidden until its draw tween starts."
+      },
+      {
+        "code": "svg_round_cap_hidden_dash",
+        "severity": "warning",
+        "message": "<path> is hidden with stroke-dasharray 1 and stroke-dashoffset 1 on pathLength 1, but its round cap can still paint a dot at the end of the path (Chrome rounds the zero-length dash differently per curve).",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Make the gap longer than the path (stroke-dasharray \"1 1.2\" with stroke-dashoffset 1.1), or keep the element visibility:hidden until its draw tween starts."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 347 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 0 has 10 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s1\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s1",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s2\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s2",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s3\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s3",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s4\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s4",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s5\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s5",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s6\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s6",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s6\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s7\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s7",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s7\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s8\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s8",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s8\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s9\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s9",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s9\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"end\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#end",
+        "dataAttributes": {},
+        "sourceFile": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"end\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target [object NodeList] not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "31.5",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "time": 0,
+        "url": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js",
+        "line": 9
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target  not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "31.5",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "time": 0,
+        "url": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js",
+        "line": 9
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target  not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "31.5",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "time": 8.75,
+        "url": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js",
+        "line": 9
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target  not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "31.5",
+          "data-width": "1080",
+          "data-height": "1920"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "time": 12.25,
+        "url": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js",
+        "line": 9
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 33,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(27)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 157.86,
+          "top": 920,
+          "right": 182.75,
+          "bottom": 1000,
+          "width": 24.89,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "t",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 157.86,
+          "y": 920,
+          "width": 24.89,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.25,
+        "occurrences": 2,
+        "heldMs": 28.999999999999915,
+        "times": [
+          26.221,
+          26.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(28)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 182.75,
+          "top": 920,
+          "right": 216.28,
+          "bottom": 1000,
+          "width": 33.53,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "a",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 182.75,
+          "y": 920,
+          "width": 33.53,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.25,
+        "occurrences": 2,
+        "heldMs": 28.999999999999915,
+        "times": [
+          26.221,
+          26.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(29)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 216.28,
+          "top": 920,
+          "right": 254.31,
+          "bottom": 1000,
+          "width": 38.03,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "g",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 216.28,
+          "y": 920,
+          "width": 38.03,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.25,
+        "occurrences": 2,
+        "heldMs": 28.999999999999915,
+        "times": [
+          26.221,
+          26.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(30)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 254.31,
+          "top": 920,
+          "right": 289.23,
+          "bottom": 1000,
+          "width": 34.92,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "e",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 254.31,
+          "y": 920,
+          "width": 34.92,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.25,
+        "occurrences": 2,
+        "heldMs": 28.999999999999915,
+        "times": [
+          26.221,
+          26.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(31)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 289.23,
+          "top": 920,
+          "right": 303.95,
+          "bottom": 1000,
+          "width": 14.72,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": ".",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 289.23,
+          "y": 920,
+          "width": 14.72,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.25,
+        "occurrences": 2,
+        "heldMs": 28.999999999999915,
+        "times": [
+          26.221,
+          26.25
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 1.056,
+        "selector": "div.bold.big",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 193.71,
+          "top": 838.71,
+          "right": 886.28,
+          "bottom": 1080.89,
+          "width": 692.57,
+          "height": 242.18
+        },
+        "containerSelector": "div.semi.l1",
+        "text": "Laptops",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 193.71,
+          "y": 838.71,
+          "width": 692.57,
+          "height": 242.18
+        },
+        "firstSeen": 1.056,
+        "lastSeen": 1.056,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.056
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 1.75,
+        "selector": "svg.gauge > circle:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -823,
+          "top": 274.49,
+          "right": 1125.88,
+          "bottom": 2223.37,
+          "width": 1948.88,
+          "height": 1948.88
+        },
+        "containerSelector": "svg.gauge",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -799.23,
+          "top": 298.26,
+          "right": 1102.11,
+          "bottom": 2199.6,
+          "width": 1901.34,
+          "height": 1901.34
+        },
+        "overflow": {
+          "left": 23.77,
+          "right": 23.77,
+          "top": 23.77,
+          "bottom": 23.77
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -823,
+          "y": 274.49,
+          "width": 1948.88,
+          "height": 1948.88
+        },
+        "firstSeen": 1.75,
+        "lastSeen": 1.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.75
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 1.75,
+        "selector": "g.needle",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 241.85,
+          "top": 2748.8,
+          "right": 807.18,
+          "bottom": 3275.8,
+          "width": 565.33,
+          "height": 527
+        },
+        "containerSelector": "svg.gauge",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -799.23,
+          "top": 298.26,
+          "right": 1102.11,
+          "bottom": 2199.6,
+          "width": 1901.34,
+          "height": 1901.34
+        },
+        "overflow": {
+          "bottom": 1076.2
+        },
+        "dataAttributes": {
+          "data-svg-origin": "2561.8541583752576 1851.9124412074937"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 241.85,
+          "y": 2748.8,
+          "width": 565.33,
+          "height": 527
+        },
+        "firstSeen": 1.75,
+        "lastSeen": 1.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.75
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 3.872,
+        "selector": "div.serif.t2",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 338.95,
+          "top": 1393.38,
+          "right": 1080,
+          "bottom": 1692.3,
+          "width": 741.05,
+          "height": 298.92
+        },
+        "containerSelector": "div.cap.t3",
+        "text": "every gigabyte",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 338.95,
+          "y": 1393.38,
+          "width": 741.05,
+          "height": 298.92
+        },
+        "firstSeen": 3.872,
+        "lastSeen": 3.872,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          3.872
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 9.503,
+        "selector": "div.semi.m1",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 293.94,
+          "top": 1144,
+          "right": 786.05,
+          "bottom": 1235,
+          "width": 492.11,
+          "height": 91
+        },
+        "containerSelector": "div.serif.m2 > span:nth-of-type(11)",
+        "text": "Memory prices",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 293.94,
+          "y": 1144,
+          "width": 492.11,
+          "height": 91
+        },
+        "firstSeen": 9.503,
+        "lastSeen": 9.503,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          9.503
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 15.75,
+        "selector": "div.serif.w3 > span:nth-of-type(17)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 1008.47,
+          "top": 1039.56,
+          "right": 1082.92,
+          "bottom": 1152.33,
+          "width": 74.45,
+          "height": 112.77
+        },
+        "containerSelector": "#s7",
+        "text": "r",
+        "fixHint": "Text is 74px x 113px inside 1080px x 1920px and overflows by up to 3px; widen the container to at least ~1083px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 2.92
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1008.47,
+          "y": 1039.56,
+          "width": 74.45,
+          "height": 112.77
+        },
+        "firstSeen": 15.75,
+        "lastSeen": 15.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          15.75
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 15.75,
+        "selector": "div.serif.w3 > span:nth-of-type(17)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 1008.47,
+          "top": 940.71,
+          "right": 1082.92,
+          "bottom": 1202.45,
+          "width": 74.45,
+          "height": 261.74
+        },
+        "containerSelector": "#root",
+        "text": "r",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 2.92
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1008.47,
+          "y": 940.71,
+          "width": 74.45,
+          "height": 261.74
+        },
+        "firstSeen": 15.75,
+        "lastSeen": 15.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          15.75
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 15.75,
+        "selector": "div.serif.w3 > span:nth-of-type(18)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 480.97,
+          "top": 1164,
+          "right": 565.3,
+          "bottom": 1453.33,
+          "width": 84.33,
+          "height": 289.33
+        },
+        "containerSelector": "div.serif.w3 > span:nth-of-type(19)",
+        "text": "e",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 480.97,
+          "y": 1164,
+          "width": 84.33,
+          "height": 289.33
+        },
+        "firstSeen": 15.75,
+        "lastSeen": 15.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          15.75
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 19.25,
+        "selector": "div.ringbg.rb1",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 462.19,
+          "top": -336.64,
+          "right": 1362.19,
+          "bottom": 563.36,
+          "width": 900,
+          "height": 900
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 282.19,
+          "top": 336.64
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 462.19,
+          "y": -336.64,
+          "width": 900,
+          "height": 900
+        },
+        "firstSeen": 19.25,
+        "lastSeen": 22.75,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          19.25,
+          22.75
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "info",
+        "time": 19.25,
+        "selector": "div.ringbg.rb2",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -347.74,
+          "top": 1329.42,
+          "right": 452.26,
+          "bottom": 2129.42,
+          "width": 800,
+          "height": 800
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 347.74,
+          "bottom": 209.42
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -347.74,
+          "y": 1329.42,
+          "width": 800,
+          "height": 800
+        },
+        "firstSeen": 19.25,
+        "lastSeen": 22.75,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          19.25,
+          22.75
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 26.221,
+        "selector": "span.tw > span:nth-of-type(23)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 148.34,
+          "top": 920,
+          "right": 185.96,
+          "bottom": 1000,
+          "width": 37.62,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "d",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 148.34,
+          "y": 920,
+          "width": 37.62,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.221,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.221
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 26.221,
+        "selector": "span.tw > span:nth-of-type(24)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 185.96,
+          "top": 920,
+          "right": 221.01,
+          "bottom": 1000,
+          "width": 35.05,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "v",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 185.96,
+          "y": 920,
+          "width": 35.05,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.221,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.221
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 26.221,
+        "selector": "span.tw > span:nth-of-type(25)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 221.01,
+          "top": 920,
+          "right": 254.54,
+          "bottom": 1000,
+          "width": 33.53,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "a",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 221.01,
+          "y": 920,
+          "width": 33.53,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.221,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.221
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 26.221,
+        "selector": "span.tw > span:nth-of-type(26)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 254.54,
+          "top": 920,
+          "right": 290.38,
+          "bottom": 1000,
+          "width": 35.84,
+          "height": 80
+        },
+        "containerSelector": "div.smart",
+        "text": "n",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 254.54,
+          "y": 920,
+          "width": 35.84,
+          "height": 80
+        },
+        "firstSeen": 26.221,
+        "lastSeen": 26.221,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.221
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -629.08,
+          "top": 920,
+          "right": -590.33,
+          "bottom": 1000,
+          "width": 38.75,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "B",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 629.08
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -629.08,
+          "y": 920,
+          "width": 38.75,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(2)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -590.33,
+          "top": 920,
+          "right": -555.41,
+          "bottom": 1000,
+          "width": 34.92,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "e",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 590.33
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -590.33,
+          "y": 920,
+          "width": 34.92,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(3)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -555.41,
+          "top": 920,
+          "right": -521.02,
+          "bottom": 1000,
+          "width": 34.39,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "c",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 555.41
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -555.41,
+          "y": 920,
+          "width": 34.39,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(4)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -521.02,
+          "top": 920,
+          "right": -487.48,
+          "bottom": 1000,
+          "width": 33.54,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "a",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 521.02
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -521.02,
+          "y": 920,
+          "width": 33.54,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(5)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -487.48,
+          "top": 920,
+          "right": -451.64,
+          "bottom": 1000,
+          "width": 35.84,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "u",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 487.48
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -487.48,
+          "y": 920,
+          "width": 35.84,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(6)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -451.64,
+          "top": 920,
+          "right": -422.53,
+          "bottom": 1000,
+          "width": 29.11,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "s",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 451.64
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -451.64,
+          "y": 920,
+          "width": 29.11,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(7)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -422.53,
+          "top": 920,
+          "right": -387.61,
+          "bottom": 1000,
+          "width": 34.92,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "e",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 422.53
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -422.53,
+          "y": 920,
+          "width": 34.92,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(9)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -373.55,
+          "top": 920,
+          "right": -337.7,
+          "bottom": 1000,
+          "width": 35.85,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "n",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 373.55
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -373.55,
+          "y": 920,
+          "width": 35.85,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(10)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -337.7,
+          "top": 920,
+          "right": -302.78,
+          "bottom": 1000,
+          "width": 34.92,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "e",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 337.7
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -337.7,
+          "y": 920,
+          "width": 34.92,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(11)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -302.78,
+          "top": 920,
+          "right": -249.31,
+          "bottom": 1000,
+          "width": 53.47,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "w",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 302.78
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -302.78,
+          "y": 920,
+          "width": 53.47,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(13)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -235.25,
+          "top": 920,
+          "right": -219.59,
+          "bottom": 1000,
+          "width": 15.66,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "i",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 235.25
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -235.25,
+          "y": 920,
+          "width": 15.66,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(14)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -219.59,
+          "top": 920,
+          "right": -190.48,
+          "bottom": 1000,
+          "width": 29.11,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "s",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 219.59
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -219.59,
+          "y": 920,
+          "width": 29.11,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(15)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -190.48,
+          "top": 920,
+          "right": -154.64,
+          "bottom": 1000,
+          "width": 35.84,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "n",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 190.48
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -190.48,
+          "y": 920,
+          "width": 35.84,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(16)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -154.64,
+          "top": 920,
+          "right": -140.11,
+          "bottom": 1000,
+          "width": 14.53,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "'",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 154.64
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -154.64,
+          "y": 920,
+          "width": 14.53,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(17)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -140.11,
+          "top": 920,
+          "right": -115.22,
+          "bottom": 1000,
+          "width": 24.89,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "t",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 140.11
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -140.11,
+          "y": 920,
+          "width": 24.89,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(19)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -101.16,
+          "top": 920,
+          "right": -67.62,
+          "bottom": 1000,
+          "width": 33.54,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "a",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 101.16
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -101.16,
+          "y": 920,
+          "width": 33.54,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(20)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -67.62,
+          "top": 920,
+          "right": -31.78,
+          "bottom": 1000,
+          "width": 35.84,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "n",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 67.62
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -67.62,
+          "y": 920,
+          "width": 35.84,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(22)",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": -17.72,
+          "top": 949,
+          "right": 15.81,
+          "bottom": 984,
+          "width": 33.53,
+          "height": 35
+        },
+        "containerSelector": "#s9",
+        "text": "a",
+        "fixHint": "Text is 34px x 35px inside 1080px x 1920px and overflows by up to 18px; widen the container to at least ~1098px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 17.72
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -17.72,
+          "y": 949,
+          "width": 33.53,
+          "height": 35
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 26.25,
+        "selector": "span.tw > span:nth-of-type(22)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -17.72,
+          "top": 920,
+          "right": 15.81,
+          "bottom": 1000,
+          "width": 33.53,
+          "height": 80
+        },
+        "containerSelector": "#root",
+        "text": "a",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 17.72
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -17.72,
+          "y": 920,
+          "width": 33.53,
+          "height": 80
+        },
+        "firstSeen": 26.25,
+        "lastSeen": 26.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.25
+        ]
+      }
+    ],
+    "duration": 31.5,
+    "samples": [
+      1.75,
+      5.25,
+      8.75,
+      12.25,
+      15.75,
+      19.25,
+      22.75,
+      26.25,
+      29.75
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 38,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.75,
+      8.75,
+      15.75,
+      22.75,
+      29.75
+    ],
+    "checked": 46,
+    "passed": 46
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 7,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"New laptops are\" (3 words) is on screen 0.64 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "New laptops are",
+        "selector": "div.semi.l1",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 201.45,
+          "y": 803.14,
+          "width": 677.0999999999999,
+          "height": 115
+        },
+        "time": 1,
+        "words": 3,
+        "seconds": 0.641,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"RAM · SSD · CHIPS · 2026\" (4 words) is on screen 0.13 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "RAM · SSD · CHIPS · 2026",
+        "selector": "div.cap.t3",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 586.75,
+          "y": 1572.22,
+          "width": 411.5899999999999,
+          "height": 31.930000000000064
+        },
+        "time": 3.734,
+        "words": 4,
+        "seconds": 0.133,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 5 text elements stay under it for 0.5 s or more, the smallest \"Price updated\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Price updated",
+        "selector": "div.card.k0 > div:nth-of-type(2) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 221.37,
+          "y": 533.74,
+          "width": 140.8,
+          "height": 34.26
+        },
+        "time": 6.5,
+        "times": [
+          3,
+          4.5,
+          6.5,
+          6.875,
+          7.125
+        ],
+        "fontPx": 22,
+        "floorPx": 28,
+        "seconds": 1.625,
+        "elements": [
+          {
+            "selector": "div.card.k0 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "Price updated",
+            "fontPx": 22,
+            "time": 6.5,
+            "seconds": 1.625
+          },
+          {
+            "selector": "div.card.k1 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "Price updated",
+            "fontPx": 22,
+            "time": 6.875,
+            "seconds": 1.25
+          },
+          {
+            "selector": "div.card.k2 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "Price updated",
+            "fontPx": 22,
+            "time": 7.125,
+            "seconds": 1
+          },
+          {
+            "selector": "div.cap.t3",
+            "text": "RAM · SSD · chips · 2026",
+            "fontPx": 24,
+            "time": 3,
+            "seconds": 0.875
+          },
+          {
+            "selector": "div.abs.cap",
+            "text": "Memory · storage · processors",
+            "fontPx": 24,
+            "time": 4.5,
+            "seconds": 1.875
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"more than doubled.\" (3 words) is on screen 1.00 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "more than doubled.",
+        "selector": "div.serif.m2",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 28.72,
+          "y": 1165.03,
+          "width": 189.9,
+          "height": 318.78999999999996
+        },
+        "time": 9.367,
+        "words": 3,
+        "seconds": 1,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"A fraction of the price\" (5 words) is on screen 1.30 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "A fraction of the price",
+        "selector": "div.stack > div:nth-of-type(5) > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 226.84,
+          "y": 1221.2,
+          "width": 554.58,
+          "height": 68.1099999999999
+        },
+        "time": 22.469,
+        "words": 5,
+        "seconds": 1.305,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Mumbai, India\" (2 words) is on screen 1.96 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Mumbai, India",
+        "selector": "div.city > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 435.41,
+          "y": 1423.13,
+          "width": 209.17000000000002,
+          "height": 34
+        },
+        "time": 29.539,
+        "words": 2,
+        "seconds": 1.965,
+        "floorSeconds": 2
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 252
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
