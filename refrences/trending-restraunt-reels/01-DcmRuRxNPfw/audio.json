@@ -1,0 +1,21 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -14.1,
+  "tempo_estimate_bpm": 110.3,
+  "tempo_confidence_0_1": 0.42,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "en",
+  "whisper_language_prob": 0.61,
+  "speech_seconds_vad": 0,
+  "speech_fraction": 0.0,
+  "transcript_segments": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "text": "You",
+      "no_speech_prob": 0.77,
+      "avg_logprob": -0.92
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}

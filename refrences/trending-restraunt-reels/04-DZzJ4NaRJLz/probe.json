@@ -1,0 +1,15 @@
+{
+  "duration_s": 21.268,
+  "width": 720,
+  "height": 1280,
+  "aspect": "720:1280",
+  "fps": 30.0,
+  "video_codec": "h264",
+  "nb_frames": 638,
+  "bitrate_kbps": 1788,
+  "audio": {
+    "codec": "aac",
+    "sample_rate": 44100,
+    "channels": 2
+  }
+}

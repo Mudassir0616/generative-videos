@@ -1,0 +1,28 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -14.2,
+  "tempo_estimate_bpm": 79.8,
+  "tempo_confidence_0_1": 0.25,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "en",
+  "whisper_language_prob": 0.69,
+  "speech_seconds_vad": 10.0,
+  "speech_fraction": 1.01,
+  "transcript_segments": [
+    {
+      "start": 0.18,
+      "end": 4.18,
+      "text": "Baby, come stand by my side",
+      "no_speech_prob": 0.36,
+      "avg_logprob": -0.43
+    },
+    {
+      "start": 4.18,
+      "end": 10.18,
+      "text": "Come and be my guiding light on my way",
+      "no_speech_prob": 0.36,
+      "avg_logprob": -0.43
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}

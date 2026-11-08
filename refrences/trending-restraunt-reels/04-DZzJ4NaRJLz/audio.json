@@ -1,0 +1,35 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -14.1,
+  "tempo_estimate_bpm": 85.2,
+  "tempo_confidence_0_1": 0.65,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "pa",
+  "whisper_language_prob": 0.63,
+  "speech_seconds_vad": 13.0,
+  "speech_fraction": 0.61,
+  "transcript_segments": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "text": "नज्रा दे विच्वी और अख्दा निसान।",
+      "no_speech_prob": 0.17,
+      "avg_logprob": -0.29
+    },
+    {
+      "start": 4.0,
+      "end": 8.0,
+      "text": "विष्टा वे चडे तुखडा निसान।",
+      "no_speech_prob": 0.17,
+      "avg_logprob": -0.29
+    },
+    {
+      "start": 8.0,
+      "end": 13.0,
+      "text": "विष्टा वे चडे तुखडा निसान।",
+      "no_speech_prob": 0.17,
+      "avg_logprob": -0.29
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}

@@ -1,0 +1,28 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -14.3,
+  "tempo_estimate_bpm": 69.4,
+  "tempo_confidence_0_1": 0.49,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "en",
+  "whisper_language_prob": 0.97,
+  "speech_seconds_vad": 2.0,
+  "speech_fraction": 0.07,
+  "transcript_segments": [
+    {
+      "start": 0.0,
+      "end": 1.0,
+      "text": "Is it nice there?",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.6
+    },
+    {
+      "start": 2.0,
+      "end": 3.0,
+      "text": "Yeah, it is.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.6
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}

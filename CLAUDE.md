@@ -1,7 +1,9 @@
 # AI Video Editing Workspace
 
-Folders: `raw-footags/` (source clips), `refrences/` (downloaded reference videos), `outputs/` (finished renders), `voice/` (voice references; each subfolder has a README with source + usage rights).
-Never modify files in `raw-footags/`; write results to `outputs/`.
+**Start here:** `docs/HISTORY.md` (everything done so far, user decisions and feedback, open issues). `docs/MEDIA.md` lists the media that is NOT in git (raw footage, renders, outputs, downloaded reels, licensed/copyrighted music) with size, duration and sha256. In a fresh clone those files are missing: ask the user for them instead of assuming they exist, and re-run `python tools/media_manifest.py` after adding media.
+
+Folders: `raw-footags/` (source clips), `refrences/` (downloaded reference videos), `outputs/` (finished renders), `voice/` (voice references; each subfolder has a README with source + usage rights), `tools/` (shared scripts: prep_reels, beat_grid, transcribe, seek_snapshot, media_manifest), `docs/`.
+Never modify files in `raw-footags/`; write results to `outputs/`. Never commit or push unless the user explicitly asks. The GitHub repo is public: keep client footage, renders and third-party media out of git (see `.gitignore`).
 
 ## Brand: ZELECTRONICS (approved final: outputs/zelectronics-intro-v4-40s.mp4, source: projects/zelectronics-intro)
 - Strictly black & white (+ grey tints). Sentence case for all copy; brand name always "ZELECTRONICS".
@@ -16,8 +18,17 @@ Never modify files in `raw-footags/`; write results to `outputs/`.
 - Ending: "Shop certified refurbished laptops and desktops at ZELECTRONICS." (CTA scene S10 with laptop/desktop tiles, then end card).
 - Audio: tools/make_audio.py assets/vo-friday-v2.mp3 assets/audio.wav (VO at +0.2 s; all cue times come from a whisper transcript of the VO and must match index.html).
 
+## Project: Pukhtoon restaurant reel (raw-footags/pakhtoon-vid-1, plan: projects/pakhtoon-vid-1/edit-plan.md)
+- Restaurant is "Pukhtoon" (menu logo "p♥khtoon Restaurant", heart as the "u"), inside The Caliph hotel (sign: "THE CALIPH").
+- 12 clips, 4K vertical, mostly 24 fps (C075/C096 are 30 fps), daylight, no people except one hand. Style references: refrences/trending-restraunt-reels/.
+- Posted from The Caliph hotel's account. On screen: only the full Caliph logo top centre (assets/caliph-logo-full.png: gold #bb8d28 emblem + wordmark recoloured WHITE for legibility, made by tools/make_logo.py, over a soft dark top gradient) + "Welcome To Pukhtoon" (Great Vibes) at the start, exiting on the first food cut.
+- Music: voice/restraunt/ishqa-ve-chaddeya.mp3 (85 BPM, eighths 0.3527 s from 0.101 s; cuts on that grid; no rights README).
+- v1 = 15.04 s fast cut (removed from outputs/ by the user; rebuildable); v2 = 20.21 s slower cut, user's preferred pace (outputs/pukhtoon-caliph-reel-v2-20s.mp4).
+- Rebuild a version: `python tools/build_base.py render assets/base-vN.mp4 vN` (cut list + grade), `python tools/make_comp.py vN` (writes index.html), then `npx hyperframes render --fps 24 --quality delivery` (Node 22 + ffmpeg on PATH).
+
 ## Tools
-- **FFmpeg** (`ffmpeg`, `ffprobe`, v4.2.7): cut, trim, convert, process.
+Machine notes (Mudassir's Windows 10 PC, as of 2026-11-08): no WSL distro and no system ffmpeg/yt-dlp/gh. Portable installs: Node 22 at `%LOCALAPPDATA%\Programs\node22`, FFmpeg 9 at `%LOCALAPPDATA%\Programs\ffmpeg\bin`; prepend both to PATH before HyperFrames or ffmpeg work. Python 3.13 has no numpy/faster-whisper/yt-dlp installed: `pip install numpy faster-whisper yt-dlp` (or `pip install --target <dir>`). Git Bash curl fails TLS here; use PowerShell `Invoke-WebRequest` for downloads. The ElevenLabs MCP's free tier is disabled for this account, so new VO must come from the user. Headless Chrome (`tools/seek_snapshot.py`) can screenshot a composition without HyperFrames.
+- **FFmpeg** (`ffmpeg`, `ffprobe`; v9 on the Windows PC): cut, trim, convert, process.
 - **yt-dlp**: download reference videos into `refrences/` (`yt-dlp -o "refrences/%(title)s.%(ext)s" <url>`), then analyse their editing style (cut pace via ffprobe/scene detection, captions, motion).
 - **Whisper** (`faster-whisper` Python package, CPU): word-level captions, e.g. `WhisperModel("small", device="cpu", compute_type="int8").transcribe(path, word_timestamps=True)`.
 - **HyperFrames** (`hyperframes` CLI v0.9.19): HTML to MP4 motion graphics. Requires Node >= 22: run `source ~/.nvm/nvm.sh && nvm use 22` first (system default is Node 18/20). On the Windows PC: portable Node 22 at `%LOCALAPPDATA%\Programs\node22` (prepend it to PATH; system Node is 20).

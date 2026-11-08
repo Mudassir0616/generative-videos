@@ -1,0 +1,36 @@
+# Heavy media stays OUT of git (the repo is public and git stores every binary version forever).
+# Everything ignored here is listed in docs/MEDIA.md (size, duration, sha256) so an agent knows it exists,
+# and docs/HISTORY.md explains how each piece was made. Regenerate MEDIA.md with: python tools/media_manifest.py
+
+# --- client source footage (private client material) ---
+raw-footags/
+
+# --- finished renders / deliverables (share via Drive or similar) ---
+outputs/*.mp4
+outputs/*.mov
+projects/*/renders/
+
+# --- regenerable intermediates ---
+# Pukhtoon: tools/build_base.py -> base-vN.mp4, music trims from voice/restraunt/
+projects/pakhtoon-vid-1/assets/base-*.mp4
+projects/pakhtoon-vid-1/assets/music-*.wav
+# ZELECTRONICS: tools/make_audio.py -> audio.wav
+projects/*/assets/audio.wav
+*.tmp.wav
+
+# --- HyperFrames local state, snapshots, check reports ---
+**/.hyperframes/
+
+# --- third-party content (other people's reels, commercial music) ---
+refrences/**/*.mp4
+refrences/**/frames/
+voice/restraunt/
+voice/ref-*/*.wav
+
+# --- tooling noise ---
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
