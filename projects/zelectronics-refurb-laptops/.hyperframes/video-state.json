@@ -1,138 +1,126 @@
 {
   "version": 1,
   "historyId": "d77e0ce9-67c9-44a5-bf0c-33a812632047",
-  "currentRevision": "21fabbd1-e788-4a65-86b2-4f778bea2c54",
+  "currentRevision": "0625d517-4ee7-4a4c-a32d-17a7a61f6f16",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
-      "hash": "1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/1a/1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3"
+      "hash": "368f4f17584a6fb32f0263de3dedd45192fb471918ba2547b42db3e1edf89fdb",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\36\\368f4f17584a6fb32f0263de3dedd45192fb471918ba2547b42db3e1edf89fdb"
     },
     "CLAUDE.md": {
-      "hash": "1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/1a/1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3"
+      "hash": "368f4f17584a6fb32f0263de3dedd45192fb471918ba2547b42db3e1edf89fdb",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\36\\368f4f17584a6fb32f0263de3dedd45192fb471918ba2547b42db3e1edf89fdb"
     },
     "assets/fonts/Figtree.ttf": {
       "hash": "26ad3db9b31ff7dde67a91ff515d022d2f495cd506590699cf264f0bfe6fb714",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/26/26ad3db9b31ff7dde67a91ff515d022d2f495cd506590699cf264f0bfe6fb714"
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\26\\26ad3db9b31ff7dde67a91ff515d022d2f495cd506590699cf264f0bfe6fb714"
     },
     "assets/fonts/InstrumentSerif-Italic.ttf": {
       "hash": "08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/08/08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385"
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\08\\08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385"
     },
     "assets/fonts/Michroma.ttf": {
       "hash": "b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/b6/b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87"
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\b6\\b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87"
     },
     "assets/grain.png": {
       "hash": "9a640223e6537df7bbf1004b9047b0d5f98e76f958e1e340943fa5ed8ab58d59",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/9a/9a640223e6537df7bbf1004b9047b0d5f98e76f958e1e340943fa5ed8ab58d59"
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\9a\\9a640223e6537df7bbf1004b9047b0d5f98e76f958e1e340943fa5ed8ab58d59"
+    },
+    "assets/vo-friday-v2.mp3": {
+      "hash": "dce0e029c22680bccd48f4466643e27dcbd6da0c6c997e3ca84f122bf0ee3c6f",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\dc\\dce0e029c22680bccd48f4466643e27dcbd6da0c6c997e3ca84f122bf0ee3c6f"
     },
     "assets/vo-friday.mp3": {
       "hash": "f5e33b7a351e0d210d1fb97ddfae4680a75536319bffa5cb3f61d3091bf29608",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/f5/f5e33b7a351e0d210d1fb97ddfae4680a75536319bffa5cb3f61d3091bf29608"
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\f5\\f5e33b7a351e0d210d1fb97ddfae4680a75536319bffa5cb3f61d3091bf29608"
     },
     "hyperframes.json": {
-      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+      "hash": "c7a3009d23e471acfb1ca9ec252ea16a0ca4dfe55e3b3b9d7089c8f0764f4a43",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\c7\\c7a3009d23e471acfb1ca9ec252ea16a0ca4dfe55e3b3b9d7089c8f0764f4a43"
     },
     "index.html": {
-      "hash": "a1056bd3edfca08087c10d6b7caf78bb4d09ba9e9698590f54c8cfd9f5532c5b",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/a1/a1056bd3edfca08087c10d6b7caf78bb4d09ba9e9698590f54c8cfd9f5532c5b"
+      "hash": "12b7411e72c9a43d9f55af2c3213d4fca6e7a6240611c54ff1fa2d4b5609d6aa",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\12\\12b7411e72c9a43d9f55af2c3213d4fca6e7a6240611c54ff1fa2d4b5609d6aa"
     },
     "meta.json": {
-      "hash": "127f01d90a12a62c73f54c050981e773c2da55614f464bee02f2b693dd268728",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/12/127f01d90a12a62c73f54c050981e773c2da55614f464bee02f2b693dd268728"
+      "hash": "816ed37b9dcb97e825a7f1d3011281c78c6189478287c506bc5d2f99bb01a6e9",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\81\\816ed37b9dcb97e825a7f1d3011281c78c6189478287c506bc5d2f99bb01a6e9"
     },
     "package.json": {
-      "hash": "da2efba8b9dc8af565b20fe8f66653cafd4dc01ba2bdeeba8034b2e76d780016",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/da/da2efba8b9dc8af565b20fe8f66653cafd4dc01ba2bdeeba8034b2e76d780016"
+      "hash": "c6f73bab5f3e8631507aad6aad1f237a36c75baa253a11f4d3e48163189b2279",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\c6\\c6f73bab5f3e8631507aad6aad1f237a36c75baa253a11f4d3e48163189b2279"
     },
     "script.md": {
-      "hash": "703b585bf5091a400a15f719b465cf1d19f71661386cc3fc071455c438056e80",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/70/703b585bf5091a400a15f719b465cf1d19f71661386cc3fc071455c438056e80"
+      "hash": "4dcfc6524c133da8d56297936440ba2da3543c1b1bb0f93a7561211224af3a83",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\4d\\4dcfc6524c133da8d56297936440ba2da3543c1b1bb0f93a7561211224af3a83"
     },
     "tools/make_audio.py": {
-      "hash": "1a2c4517f71924d9b546413bad3fbc3fc15b0a1482e508478f694a3fb50d6d72",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/1a/1a2c4517f71924d9b546413bad3fbc3fc15b0a1482e508478f694a3fb50d6d72"
+      "hash": "c5ba76782a0e7e907fae67d5574c8fbc9f41605babdb3b63184f11bfb28bbf45",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\c5\\c5ba76782a0e7e907fae67d5574c8fbc9f41605babdb3b63184f11bfb28bbf45"
     },
     "assets/audio.wav": {
-      "hash": "5cc62cfefe39c56c161ec6690a91d58d53a2219e77329c7c8760cadf0105458d",
-      "content": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/5c/5cc62cfefe39c56c161ec6690a91d58d53a2219e77329c7c8760cadf0105458d"
+      "hash": "b789ff4d28c4c2d8933c631019bd62b70968639b1f667b04d344fc78d55fb53d",
+      "content": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\b7\\b789ff4d28c4c2d8933c631019bd62b70968639b1f667b04d344fc78d55fb53d"
     }
   },
   "revisions": {
-    "82638d49-d1d0-4811-a4a9-7d7ec2d5708d": {
+    "a176e7ae-7383-4e71-b2e3-ee445464a0e8": {
       "actor": {
         "kind": "outside",
         "name": "Outside"
       },
       "label": "Changed outside the app",
-      "startedAt": 1794056602754,
-      "endedAt": 1794056602757,
+      "startedAt": 1794132185318,
+      "endedAt": 1794132185407,
       "files": {
+        "assets/audio.wav": {
+          "before": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\7f\\7fc84a10a2b2498d0b310bb975341c4ea034b6aa394fc03425f339e69d071c4c",
+          "after": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\b7\\b789ff4d28c4c2d8933c631019bd62b70968639b1f667b04d344fc78d55fb53d"
+        },
         "index.html": {
-          "before": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/5e/5e80c0430d46c24bed2f891dedd2022c96407537ac5bf64cb19f2c54f16c7051",
-          "after": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/ec/ec2156774ab921d9c6e8621157285c7c9241eb23a74fb442c9dfc766bbe71a27"
+          "before": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\1f\\1fe656e6e643558bc2ecc77ac3013e7a7c8e7c4b590ea81f6499aed1ebd5ee64",
+          "after": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\27\\277f996c9f1ce1b9b0b24a898d0844624bcf6c37c8b9d932cf8278e504dc8255"
+        },
+        "script.md": {
+          "before": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\c1\\c1d5de9e588259ae8a9e0e68f32adafa265117bb180445b7588ac99b99ca1dbd",
+          "after": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\4d\\4dcfc6524c133da8d56297936440ba2da3543c1b1bb0f93a7561211224af3a83"
+        },
+        "tools/make_audio.py": {
+          "before": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\e6\\e63a6b3e975492e1094bd3f7ab9f557f1095ee99f68b29f56ec9fe763ceeabf9",
+          "after": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\c5\\c5ba76782a0e7e907fae67d5574c8fbc9f41605babdb3b63184f11bfb28bbf45"
         }
       }
     },
-    "d1b8978c-3fff-4bc4-8034-b9136290fbaa": {
+    "0625d517-4ee7-4a4c-a32d-17a7a61f6f16": {
       "actor": {
         "kind": "outside",
         "name": "Outside"
       },
       "label": "Changed outside the app",
-      "startedAt": 1794056694511,
-      "endedAt": 1794056694512,
+      "startedAt": 1794132470094,
+      "endedAt": 1794132470096,
       "files": {
         "index.html": {
-          "before": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/ec/ec2156774ab921d9c6e8621157285c7c9241eb23a74fb442c9dfc766bbe71a27",
-          "after": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/90/901f24b117b5317979b81c427c6a87a7696ee61fa5f0003bfe26f7f96517c775"
-        }
-      }
-    },
-    "eba936ca-bf97-4245-b03e-0e828d0511ff": {
-      "actor": {
-        "kind": "outside",
-        "name": "Outside"
-      },
-      "label": "Changed outside the app",
-      "startedAt": 1794056817199,
-      "endedAt": 1794056817200,
-      "files": {
-        "index.html": {
-          "before": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/90/901f24b117b5317979b81c427c6a87a7696ee61fa5f0003bfe26f7f96517c775",
-          "after": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/bc/bc0b7b1aa7a511697e4bede6e19c3c0c985fcac03144313877dececc205c6508"
-        }
-      }
-    },
-    "21fabbd1-e788-4a65-86b2-4f778bea2c54": {
-      "actor": {
-        "kind": "outside",
-        "name": "Outside"
-      },
-      "label": "Changed outside the app",
-      "startedAt": 1794056859217,
-      "endedAt": 1794056859218,
-      "files": {
-        "index.html": {
-          "before": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/bc/bc0b7b1aa7a511697e4bede6e19c3c0c985fcac03144313877dececc205c6508",
-          "after": "/home/vrijesh/.cache/hyperframes/history/d77e0ce9-67c9-44a5-bf0c-33a812632047/blobs/a1/a1056bd3edfca08087c10d6b7caf78bb4d09ba9e9698590f54c8cfd9f5532c5b"
+          "before": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\27\\277f996c9f1ce1b9b0b24a898d0844624bcf6c37c8b9d932cf8278e504dc8255",
+          "after": "C:\\Users\\Mudassir\\.cache\\hyperframes\\history\\d77e0ce9-67c9-44a5-bf0c-33a812632047\\blobs\\12\\12b7411e72c9a43d9f55af2c3213d4fca6e7a6240611c54ff1fa2d4b5609d6aa"
         }
       }
     }
   },
   "checks": {
     "latest": {
-      "revision": "21fabbd1-e788-4a65-86b2-4f778bea2c54",
-      "id": "72f67f97-2d23-44fb-a434-4f3ed27f143f"
+      "revision": "a176e7ae-7383-4e71-b2e3-ee445464a0e8",
+      "id": "f2545cb2-8e47-4bb7-893e-e9cc30dedecf"
     },
     "revisions": {
-      "82638d49-d1d0-4811-a4a9-7d7ec2d5708d": [
+      "21fabbd1-e788-4a65-86b2-4f778bea2c54": [],
+      "a176e7ae-7383-4e71-b2e3-ee445464a0e8": [
         {
-          "id": "6fb0cab6-9fcb-412c-a797-db17eab78dcb",
+          "id": "f2545cb2-8e47-4bb7-893e-e9cc30dedecf",
           "scope": "project",
+          "report": "C:\\Users\\Mudassir\\Desktop\\generative-videos\\projects\\zelectronics-refurb-laptops\\.hyperframes\\artifacts\\checks\\f2545cb2-8e47-4bb7-893e-e9cc30dedecf.json",
           "metadata": {
             "ok": true,
             "browserSkipped": false,
@@ -149,99 +137,10 @@
               "browserGpuMode": "auto"
             }
           },
-          "createdAt": 1794056622888,
-          "contentHash": "b1b22497e95e37cc6b574f58291aa5360042d073094b6d3ca6c4319c90192e74",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        }
-      ],
-      "eba936ca-bf97-4245-b03e-0e828d0511ff": [
-        {
-          "id": "07a92f7c-a7f3-4c57-8aec-b9080ad2a5aa",
-          "scope": "project",
-          "metadata": {
-            "ok": false,
-            "browserSkipped": false,
-            "options": {
-              "samples": 9,
-              "atTransitions": false,
-              "maxIssues": 80,
-              "collapseStatic": true,
-              "tolerance": 2,
-              "timeout": 45000,
-              "contrast": true,
-              "strict": false,
-              "snapshots": false,
-              "browserGpuMode": "auto"
-            }
-          },
-          "createdAt": 1794056831016,
-          "contentHash": "39d236cce45cb4411498a51b18be2fb2fff33063c2a0a246dfe3407b3fc19d70",
-          "revision": "eba936ca-bf97-4245-b03e-0e828d0511ff",
-          "inputFingerprint": "a23ac1f4aa1ff7b0e2ac173b4c3083d13c08f98c01692f4724de7ae7327ab102",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "7bcf5e43-fc9b-4524-8ab8-1053eaf9720b"
-        },
-        {
-          "id": "c9ef9612-e14e-45d1-9e34-0c53f0537e7e",
-          "scope": "project",
-          "metadata": {
-            "ok": false,
-            "browserSkipped": false,
-            "options": {
-              "samples": 9,
-              "atTransitions": false,
-              "maxIssues": 80,
-              "collapseStatic": true,
-              "tolerance": 2,
-              "timeout": 45000,
-              "contrast": true,
-              "strict": false,
-              "snapshots": false,
-              "browserGpuMode": "auto"
-            }
-          },
-          "createdAt": 1794056850410,
-          "contentHash": "39d236cce45cb4411498a51b18be2fb2fff33063c2a0a246dfe3407b3fc19d70",
-          "revision": "eba936ca-bf97-4245-b03e-0e828d0511ff",
-          "inputFingerprint": "a23ac1f4aa1ff7b0e2ac173b4c3083d13c08f98c01692f4724de7ae7327ab102",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "7bcf5e43-fc9b-4524-8ab8-1053eaf9720b"
-        }
-      ],
-      "21fabbd1-e788-4a65-86b2-4f778bea2c54": [
-        {
-          "id": "72f67f97-2d23-44fb-a434-4f3ed27f143f",
-          "scope": "project",
-          "report": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/checks/72f67f97-2d23-44fb-a434-4f3ed27f143f.json",
-          "metadata": {
-            "ok": true,
-            "browserSkipped": false,
-            "options": {
-              "samples": 9,
-              "atTransitions": false,
-              "maxIssues": 80,
-              "collapseStatic": true,
-              "tolerance": 2,
-              "timeout": 45000,
-              "contrast": true,
-              "strict": false,
-              "snapshots": false,
-              "browserGpuMode": "auto"
-            }
-          },
-          "createdAt": 1794056871438,
-          "contentHash": "36cdceaa72306ba4e9f43f0bacb48d3ea03af7119db8ec48133e024915f68ca1",
-          "revision": "21fabbd1-e788-4a65-86b2-4f778bea2c54",
-          "inputFingerprint": "fe9a9809e84f9c017e2f5ad8b3a0fc4b301b3c648fe7714820a9381fa7856fd2",
+          "createdAt": 1794132206841,
+          "contentHash": "9b2f87d27e1b141cc78946b33ecbb7c0b3997a8e01907f740295ca1557a5533e",
+          "revision": "a176e7ae-7383-4e71-b2e3-ee445464a0e8",
+          "inputFingerprint": "3cdd7ff532032f3841b76a34623891f58f004ebdeed377a2700139a85ff3344e",
           "inputScope": "local-project-files",
           "attribution": "recorded-revision"
         }
@@ -249,11 +148,11 @@
     },
     "unversioned": [
       {
-        "id": "c157a87c-270c-4c55-b1aa-f564c0fae8c7",
+        "id": "ef903dc7-3816-40ba-af04-e7a492458c76",
         "scope": "project",
-        "report": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/checks/c157a87c-270c-4c55-b1aa-f564c0fae8c7.json",
+        "report": "C:\\Users\\Mudassir\\Desktop\\generative-videos\\projects\\zelectronics-refurb-laptops\\.hyperframes\\artifacts\\checks\\ef903dc7-3816-40ba-af04-e7a492458c76.json",
         "metadata": {
-          "ok": true,
+          "ok": false,
           "browserSkipped": false,
           "options": {
             "samples": 9,
@@ -268,472 +167,31 @@
             "browserGpuMode": "auto"
           }
         },
-        "createdAt": 1794056558339,
-        "contentHash": "a3f414b19f84a3d13604a0c16b6fd6036f942632cd0be1703a826b89e3fc82cc",
+        "createdAt": 1794131780368,
+        "contentHash": "6a7b9543f9084dcae7b0944d6bcb9fe36aec81e12f08b0b5d5e833e1b1d2463c",
         "revision": null,
-        "inputFingerprint": "c1725860175e327587320f361ba5e0675b663b105e9b5954488248aeaca7e1c5",
+        "inputFingerprint": "c9a6cce2c8db06b686d666284cd961b20facfb66b91de22348c7cc9886d2d651",
         "inputScope": "local-project-files",
         "attribution": "unversioned"
       }
     ]
   },
   "snapshots": {
-    "latest": {
-      "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-      "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-7"
-    },
-    "revisions": {
-      "82638d49-d1d0-4811-a4a9-7d7ec2d5708d": [
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-0",
-          "time": 0,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645610,
-          "contentHash": "221ce49f9791a8087f661241112161dd69be73d0d2a4a003af1a5363d66e4e28",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-1",
-          "time": 1.5,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "08dce354108bf3bcb3de2c7472f6e6ea2cc04c9f61b4853c70497d96aa20ce0a",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-2",
-          "time": 3.3,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "d39a405f4e9aa2caca19a9a2c80b33f4d89b443b3c3ab930f19226daffe6d3d6",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-3",
-          "time": 5.9,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "0172b6ca6778af328ee5776b17839f31ab8d2a6af323bf0736fa3e30b61a3987",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-4",
-          "time": 7.6,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "f6c5d7c1732e4825fcf73d0a8beecc1c129107b607baa122162f30cf91363157",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-5",
-          "time": 9.95,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "7a0246edbf532def9ccec44f8e8cbaf5882e41863c170a98502e8eff5a18b006",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-6",
-          "time": 13.9,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "df79a582363cb52e80be3c4a5a989322cec17e9deeecb1cc9561701ef573fb48",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-7",
-          "time": 16.1,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "2a01254e48bbc2e8ec034fe9bdebca49418c060daae315f5ec0b80ba179277d2",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-8",
-          "time": 23.2,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "04f88326614b645ba394803a1e3c3b5fcdacd318cb16e59517728117144d1168",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-9",
-          "time": 25.6,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645611,
-          "contentHash": "fc9a5db998c7ff136d5dc350172202ea6eeca56428c7aeb103a95447bb7de351",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-10",
-          "time": 27.2,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645612,
-          "contentHash": "63f8ead380bd47f17b9710b86b25036f5d36bc6ac65c7fa11c699e33262fca70",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-11",
-          "time": 30.5,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645612,
-          "contentHash": "fe3029f3fccff11cc78299b9ecd338ca5fe50bd73c5e7ce5963a37152fa47c1b",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        },
-        {
-          "scope": "full",
-          "id": "8117edd7-df8d-430c-8ff9-b7f0edcfd207-12",
-          "time": 31.25,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056645612,
-          "contentHash": "c9dd5deeba9d4085c154fc7c26713d1576859583b1f5ce141e6fcf0d6efa6c14",
-          "revision": "82638d49-d1d0-4811-a4a9-7d7ec2d5708d",
-          "inputFingerprint": "7305692a7866c5ffe0ff215d377624506b0e4ac62af5a770dd81618ea9b939b6",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision",
-          "status": "cleaned",
-          "cleanedAfterRender": "6e6e850e-e07c-4c30-abf1-4f9ddbaebffc"
-        }
-      ],
-      "d1b8978c-3fff-4bc4-8034-b9136290fbaa": [
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-0",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-00-at-0s.png",
-          "time": 0,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700488,
-          "contentHash": "5d9b788ecc90e81a6d0c5e21155ec6448e1bf5f36aa02c50539df9f3de5bc4d6",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        },
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-1",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-01-at-2.4s.png",
-          "time": 2.4,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700488,
-          "contentHash": "befacee3f283b2e7002f148312702a8a918c1be0b3e25183d361c2e8de887d6a",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        },
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-2",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-02-at-3.3s.png",
-          "time": 3.3,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700488,
-          "contentHash": "726bda393a87f283f3f7e2d1cb253a9fc7d8eb9f376e1d48244478095cd5f22a",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        },
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-3",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-03-at-9.95s.png",
-          "time": 9.95,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700488,
-          "contentHash": "a9b8051fa621227e134708cc5e8c462fd303ffa9723899a72bc3654822ac2131",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        },
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-4",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-04-at-12.5s.png",
-          "time": 12.5,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700488,
-          "contentHash": "6d438dc6a12d2122561bffc712313169ec84d9bfa04363fbe6c803c8f382faf6",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        },
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-5",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-05-at-16.1s.png",
-          "time": 16.1,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700489,
-          "contentHash": "67201c4c47d583c3ea53bf73676544e5fc631880f89310cbbfffb863aad4c4a0",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        },
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-6",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-06-at-27.2s.png",
-          "time": 27.2,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700489,
-          "contentHash": "7c2fa997d15506d836e7993b5938097b20d516d49f97c26569b21616ed1f2061",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        },
-        {
-          "scope": "full",
-          "id": "aee52e7d-b553-4608-a53f-c2993e4a7d8b-7",
-          "image": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/.hyperframes/artifacts/snapshots/d0f2416e-cfb1-4540-91ad-b214901ba6cb/frame-07-at-31.25s.png",
-          "time": 31.25,
-          "metadata": {
-            "width": 1080,
-            "height": 1920,
-            "zoomScale": 1,
-            "browserGpuMode": "auto",
-            "warnings": [],
-            "partial": false
-          },
-          "createdAt": 1794056700489,
-          "contentHash": "c9dd5deeba9d4085c154fc7c26713d1576859583b1f5ce141e6fcf0d6efa6c14",
-          "revision": "d1b8978c-3fff-4bc4-8034-b9136290fbaa",
-          "inputFingerprint": "4c4a821fd5e64f92e0b8cbc4762ac594a8dc127939e429b4f24484d12b141df7",
-          "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
-        }
-      ]
-    },
+    "latest": null,
+    "revisions": {},
     "unversioned": []
   },
   "renders": {
     "latest": {
-      "id": "7bcf5e43-fc9b-4524-8ab8-1053eaf9720b",
-      "completedAt": 1794056972039,
-      "output": "/home/vrijesh/Videos/AI-videos/projects/zelectronics-refurb-laptops/renders/zelectronics-refurb-laptops_2026-11-07_18-37-53.mp4",
+      "id": "e3e25904-3fde-4c20-b184-e13ea4804bf1",
+      "completedAt": 1794132610963,
+      "output": "C:\\Users\\Mudassir\\Desktop\\generative-videos\\projects\\zelectronics-refurb-laptops\\renders\\zelectronics-refurb-laptops_2026-11-08_15-37-45.mp4",
       "status": "completed",
-      "revision": "21fabbd1-e788-4a65-86b2-4f778bea2c54"
+      "revision": "0625d517-4ee7-4a4c-a32d-17a7a61f6f16"
     },
     "retainedRevisions": [
-      "21fabbd1-e788-4a65-86b2-4f778bea2c54",
-      "d1b8978c-3fff-4bc4-8034-b9136290fbaa"
+      "0625d517-4ee7-4a4c-a32d-17a7a61f6f16",
+      "a176e7ae-7383-4e71-b2e3-ee445464a0e8"
     ]
   },
   "pendingArtifactCleanup": []

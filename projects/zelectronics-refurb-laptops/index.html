@@ -8,7 +8,10 @@
       @font-face { font-family: "Figtree"; src: url("assets/fonts/Figtree.ttf") format("truetype"); font-weight: 300 900; font-display: block; }
       @font-face { font-family: "InstrumentSerifItalic"; src: url("assets/fonts/InstrumentSerif-Italic.ttf") format("truetype"); font-style: italic; font-display: block; }
       @font-face { font-family: "Michroma"; src: url("assets/fonts/Michroma.ttf") format("truetype"); font-display: block; }
-      :root { --m: 90px; --ink: #000; --grey: #8a8a8a; --soft: #e9e9e9; }
+      :root { --m: 90px; --ink: #000; --grey: #8a8a8a; --soft: #e9e9e9; --red: #E10600; --blue: #3E77EE; }
+      /* colour accents: red = the problem (cost), blue = the answer (refurbished / smart). One accent per scene, max. */
+      .red { color: var(--red); }
+      .blue { color: var(--blue); }
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body { width: 1080px; height: 1920px; overflow: hidden; background: #fff; }
       #root { position: relative; width: 1080px; height: 1920px; font-family: "Figtree", sans-serif; color: #000; background: #fff; }
@@ -23,6 +26,10 @@
       .ch { display: inline-block; white-space: pre; }
       .cap { font-size: 28px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grey); }
       .cursor { display: inline-block; width: 6px; height: 0.95em; background: #000; vertical-align: -0.12em; margin-left: 6px; }
+      /* typewriter: a hidden full copy fixes the line's width/position; the live copy types over it so the cursor follows the last letter */
+      .twbox { position: relative; display: inline-block; white-space: nowrap; }
+      .twbox .ghost { visibility: hidden; }
+      .twbox .live { position: absolute; left: 0; top: 0; white-space: nowrap; }
       .glow { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.04) 40%, rgba(0,0,0,0) 70%); }
 
       /* decoration */
@@ -38,7 +45,7 @@
       .note.tr { right: var(--m); top: 100px; }
 
       /* S1 */
-      #s1 .rupee { position: absolute; font-size: 54px; font-weight: 700; color: #000; }
+      #s1 .rupee { position: absolute; font-size: 54px; font-weight: 700; color: var(--red); }
       /* S2 gauge */
       #s2 .gauge { position: absolute; left: -650px; top: 450px; width: 1600px; height: 1600px; }
       #s2 .txt { position: absolute; right: var(--m); top: 1330px; text-align: right; }
@@ -54,30 +61,37 @@
       .card .t1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; }
       .card .t2 { font-size: 28px; font-weight: 600; color: var(--grey); margin-top: 6px; }
       .card .bar { height: 10px; border-radius: 6px; background: #efefef; margin-top: 12px; }
-      .card .up { margin-left: auto; width: 62px; height: 62px; border-radius: 50%; border: 3px solid #000; display: flex; align-items: center; justify-content: center; flex: none; }
+      .card .up { margin-left: auto; width: 62px; height: 62px; border-radius: 50%; border: 3px solid var(--red); color: var(--red); display: flex; align-items: center; justify-content: center; flex: none; }
       /* S5 counter */
       #s5 .ring { position: absolute; left: 290px; top: 560px; width: 500px; height: 500px; }
       #s5 .num { position: absolute; left: 290px; top: 560px; width: 500px; height: 500px; display: flex; align-items: center; justify-content: center; font-size: 150px; font-weight: 800; letter-spacing: -0.05em; }
-      #s5 .plus { position: absolute; left: 668px; top: 688px; font-size: 100px; font-weight: 800; }
+      /* "+" badge sits clear of the ring (ring centre 540,810, outer r 230; badge centre 755,595) */
+      #s5 .plus { position: absolute; left: 707px; top: 547px; width: 96px; height: 96px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; }
       /* S6 hexagons */
       #s6 svg.net { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
       #s6 .lbl { position: absolute; font-size: 42px; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
       /* S8 pills */
       .pill { display: inline-block; border: 3px solid #000; border-radius: 999px; padding: 22px 44px 24px; font-size: 46px; font-weight: 700; letter-spacing: -0.015em; white-space: nowrap; background: #fff; color: #000; }
       .pill.f { background: #000; color: #fff; }
+      .pill.b { background: var(--blue); border-color: var(--blue); color: #fff; }
       #s8 .stack { position: absolute; left: var(--m); right: var(--m); top: 640px; display: flex; flex-direction: column; gap: 30px; align-items: flex-start; }
       #s8 .r { display: flex; gap: 22px; }
       #s8 .ringbg { position: absolute; border-radius: 50%; border: 110px solid rgba(0,0,0,0.06); filter: blur(26px); }
       /* S9 / S10 */
       #s9 .line1 { position: absolute; left: 0; right: 0; top: 920px; text-align: center; font-size: 66px; font-weight: 700; letter-spacing: -0.025em; white-space: nowrap; }
       #s9 .smart { position: absolute; left: 0; right: 0; top: 850px; text-align: center; font-size: 190px; font-weight: 800; letter-spacing: -0.05em; line-height: 1; }
-      #s9 .ell { position: absolute; left: 40px; top: 620px; width: 1000px; height: 625px; overflow: visible; }
+      #s9 .ell { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: visible; }
+      /* S10 call to action */
+      #s10 .tiles { position: absolute; left: 0; right: 0; top: 860px; display: flex; justify-content: center; gap: 90px; }
+      #s10 .t { display: flex; flex-direction: column; align-items: center; gap: 34px; }
+      #s10 .sq { width: 260px; height: 260px; border-radius: 64px; background: #000; color: #fff; display: flex; align-items: center; justify-content: center; }
+      #s10 .lab { font-size: 60px; font-weight: 800; letter-spacing: -0.03em; }
       /* end card */
       #end .tile { position: absolute; left: 50%; top: 470px; width: 240px; height: 240px; margin-left: -120px; border-radius: 58px; background: #000; display: flex; align-items: center; justify-content: center; }
       #end .dial { position: absolute; left: 50%; top: 590px; width: 600px; height: 600px; margin: -300px 0 0 -300px; opacity: 0.12; }
       #end .brand { position: absolute; left: 0; right: 0; top: 850px; text-align: center; font-family: "Michroma"; font-size: 66px; letter-spacing: 0.07em; -webkit-text-stroke: 0.07em currentColor; white-space: nowrap; }
-      #end .brule { position: absolute; left: 50%; top: 985px; width: 160px; margin-left: -80px; height: 4px; background: #000; }
-      #end .tag { position: absolute; left: 0; right: 0; top: 1035px; text-align: center; font-size: 58px; font-weight: 800; letter-spacing: -0.03em; }
+      #end .brule { position: absolute; left: 50%; top: 985px; width: 160px; margin-left: -80px; height: 4px; background: var(--blue); }
+      #end .tag { position: absolute; left: 0; right: 0; top: 1035px; text-align: center; font-size: 52px; font-weight: 800; letter-spacing: -0.03em; }
       #end .tag2 { position: absolute; left: 0; right: 0; top: 1110px; text-align: center; font-size: 74px; }
       #end .contact { position: absolute; left: 0; right: 0; top: 1260px; text-align: center; font-size: 46px; font-weight: 700; line-height: 1.5; letter-spacing: -0.01em; }
       #end .contact .city { font-size: 28px; letter-spacing: 0.08em; color: var(--grey); margin-top: 14px; }
@@ -88,21 +102,21 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="31.5" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="36.5" data-width="1080" data-height="1920">
 
       <!-- S1 hook: "New laptops are expensive." -->
-      <section id="s1" class="clip" data-start="0" data-duration="1.65" data-track-index="0"><div class="stage">
+      <section id="s1" class="clip" data-start="0" data-duration="2.3" data-track-index="0"><div class="stage">
         <div class="glow g1" style="left:40px; top:460px; width:1000px; height:1000px"></div>
         <div class="center a"><div class="bold big" style="font-size:250px">Laptops</div></div>
         <div class="center b">
           <div class="semi l1" style="font-size:96px">New laptops are</div>
-          <div class="serif l2" style="font-size:210px; margin-top:6px">expensive.</div>
+          <div class="serif l2 red" style="font-size:210px; margin-top:6px">expensive.</div>
         </div>
         <div class="rupees"></div>
       </div></section>
 
       <!-- S2 gauge: "because every gigabyte of RAM," -->
-      <section id="s2" class="clip" data-start="1.65" data-duration="2.25" data-track-index="0"><div class="stage">
+      <section id="s2" class="clip" data-start="2.3" data-duration="2.45" data-track-index="0"><div class="stage">
         <svg class="gauge" viewBox="0 0 1600 1600"></svg>
         <div class="txt">
           <div class="semi t1" style="font-size:70px">Because</div>
@@ -112,7 +126,7 @@
       </div></section>
 
       <!-- S3 components: "every SSD, every chip inside" -->
-      <section id="s3" class="clip" data-start="3.9" data-duration="2.4" data-track-index="0"><div class="stage">
+      <section id="s3" class="clip" data-start="4.75" data-duration="2.35" data-track-index="0"><div class="stage">
         <div class="abs" style="left:0; right:0; top:440px; text-align:center">
           <div class="bold h1" style="font-size:120px">Every SSD,</div>
           <div class="serif h2" style="font-size:150px; margin-top:10px">every chip inside</div>
@@ -123,20 +137,20 @@
       </div></section>
 
       <!-- S4 price cards: "costs more than ever." -->
-      <section id="s4" class="clip" data-start="6.3" data-duration="1.8" data-track-index="0"><div class="stage">
+      <section id="s4" class="clip" data-start="7.1" data-duration="2.05" data-track-index="0"><div class="stage">
         <div class="cards"></div>
         <div class="abs bold ty" style="left:0; right:0; top:910px; text-align:center; font-size:92px">Costs more than ever.</div>
       </div></section>
 
       <!-- S5 counter: "Memory prices have more than doubled." -->
-      <section id="s5" class="clip" data-start="8.1" data-duration="2.3" data-track-index="0"><div class="stage">
+      <section id="s5" class="clip" data-start="9.15" data-duration="2.3" data-track-index="0"><div class="stage">
         <div class="glow g5" style="left:140px; top:410px; width:800px; height:800px"></div>
         <svg class="ring" viewBox="0 0 500 500">
           <circle cx="250" cy="250" r="215" fill="none" stroke="#e8e8e8" stroke-width="30"/>
           <circle class="arc" cx="250" cy="250" r="215" fill="none" stroke="#000" stroke-width="30" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" transform="rotate(-90 250 250)"/>
         </svg>
         <div class="num">1.0×</div>
-        <div class="plus">+</div>
+        <div class="plus"><svg viewBox="0 0 24 24" width="54" height="54" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg></div>
         <div class="abs" style="left:0; right:0; top:1150px; text-align:center">
           <div class="semi m1" style="font-size:76px">Memory prices</div>
           <div class="serif m2" style="font-size:150px; margin-top:8px">more than doubled.</div>
@@ -144,7 +158,7 @@
       </div></section>
 
       <!-- S6 hexagons: "That's money lost, upgrades delayed, and work slowed down." -->
-      <section id="s6" class="clip" data-start="10.4" data-duration="4.05" data-track-index="0"><div class="stage">
+      <section id="s6" class="clip" data-start="11.45" data-duration="4.3" data-track-index="0"><div class="stage">
         <svg class="net" viewBox="0 0 1080 1920"></svg>
         <div class="lbl l0" style="left:110px; top:470px">Money lost</div>
         <div class="lbl l1" style="right:110px; top:470px">Upgrades delayed</div>
@@ -152,20 +166,20 @@
       </div></section>
 
       <!-- S7 contrast: "The smartest buyers aren't paying more." -->
-      <section id="s7" class="clip" data-start="14.45" data-duration="2.2" data-track-index="0"><div class="stage">
+      <section id="s7" class="clip" data-start="15.75" data-duration="2.55" data-track-index="0"><div class="stage">
         <div class="abs" style="left:0; right:0; top:700px; text-align:center">
           <div class="bold" style="font-size:140px"><span class="w w0">The</span> <span class="w w1">smartest</span></div>
           <div class="bold" style="font-size:140px; margin-top:6px"><span class="w w2">buyers</span></div>
-          <div class="serif w3" style="font-size:136px; margin-top:44px; white-space:nowrap">aren't paying more.</div>
+          <div class="serif w3 blue" style="font-size:136px; margin-top:44px; white-space:nowrap">aren't paying more.</div>
         </div>
       </div></section>
 
       <!-- S8 pills -->
-      <section id="s8" class="clip" data-start="16.65" data-duration="7.15" data-track-index="0"><div class="stage">
+      <section id="s8" class="clip" data-start="18.3" data-duration="7.9" data-track-index="0"><div class="stage">
         <div class="ringbg rb1" style="width:900px; height:900px; left:520px; top:-380px"></div>
         <div class="ringbg rb2" style="width:800px; height:800px; left:-420px; top:1380px"></div>
         <div class="stack">
-          <div class="r"><span class="pill f p0">They're buying refurbished</span></div>
+          <div class="r"><span class="pill b p0">They're buying refurbished</span></div>
           <div class="r" style="margin-left:120px"><span class="pill p1">Tested</span><span class="pill f p2">Certified</span></div>
           <div class="r" style="margin-left:40px"><span class="pill p3">Same performance</span></div>
           <div class="r" style="margin-left:200px"><span class="pill f p4">Backed by warranty</span></div>
@@ -174,20 +188,33 @@
       </div></section>
 
       <!-- S9 + S10: "Because new isn't an advantage. Smart is." -->
-      <section id="s9" class="clip" data-start="23.8" data-duration="3.85" data-track-index="0"><div class="stage">
-        <div class="line1" data-layout-allow-overflow><span class="tw">Because new isn't an advantage.</span><span class="cursor c9"></span></div>
-        <div class="glow g9" style="left:90px; top:500px; width:900px; height:900px"></div>
+      <section id="s9" class="clip" data-start="26.2" data-duration="4" data-track-index="0"><div class="stage">
+        <div class="line1" data-layout-allow-overflow>Because new isn't an advantage.</div>
+        <div class="glow g9" style="left:90px; top:500px; width:900px; height:900px; background:radial-gradient(circle, rgba(62,119,238,0.16) 0%, rgba(62,119,238,0.06) 40%, rgba(62,119,238,0) 70%)"></div>
         <div class="smart">Smart is.</div>
-        <svg class="ell" viewBox="0 0 800 500"><path d="M70 290 C 30 165, 300 105, 520 118 C 730 132, 795 245, 705 335 C 605 420, 290 428, 140 375 C 40 338, 25 255, 115 182" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+        <svg class="ell" viewBox="0 0 1080 1920"><path d="M120 1000 C 70 900, 290 800, 560 800 C 830 800, 1000 860, 990 945 C 980 1035, 780 1080, 530 1078 C 290 1076, 90 1030, 100 950 C 108 885, 190 845, 300 828" fill="none" stroke="#3E77EE" stroke-width="10" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
       </div></section>
 
-      <!-- END CARD -->
-      <section id="end" class="clip" data-start="27.65" data-duration="3.85" data-track-index="0"><div class="stage">
+      <!-- S10 call to action: "Shop certified refurbished laptops and desktops at ..." -->
+      <section id="s10" class="clip" data-start="30.2" data-duration="2.75" data-track-index="0"><div class="stage">
+        <div class="glow g10" style="left:90px; top:560px; width:900px; height:900px"></div>
+        <div class="abs" style="left:0; right:0; top:440px; text-align:center">
+          <div class="semi c1" style="font-size:84px">Shop <span class="serif blue" style="font-size:124px">certified</span></div>
+          <div class="bold c2" style="font-size:130px; margin-top:14px">refurbished</div>
+        </div>
+        <div class="tiles">
+          <div class="t t0"><div class="sq"></div><div class="lab">Laptops</div></div>
+          <div class="t t1"><div class="sq"></div><div class="lab">Desktops</div></div>
+        </div>
+      </div></section>
+
+      <!-- END CARD ("... at ZELECTRONICS.") -->
+      <section id="end" class="clip" data-start="32.95" data-duration="3.55" data-track-index="0"><div class="stage">
         <div class="dial"></div>
         <div class="tile"><svg viewBox="0 0 300 143" width="150" height="72" aria-label="ZE"><path fill="#fff" d="M0,0 H130 A13,13 0 0 1 143,13 V29 H133 L48,114 H143 V143 H13 A13,13 0 0 1 0,130 V114 H9 L94,29 H0 Z"/><path fill="#fff" d="M182,0 H300 V29 H186 V57 H300 V86 H186 V114 H300 V143 H182 A25,25 0 0 1 157,118 V25 A25,25 0 0 1 182,0 Z"/></svg></div>
         <div class="brand">ZELECTRONICS</div>
         <div class="brule"></div>
-        <div class="tag"><span class="lineup"><span class="in">Refurbished laptops.</span></span></div>
+        <div class="tag"><span class="lineup"><span class="in">Refurbished laptops &amp; desktops.</span></span></div>
         <div class="contact">
           <div><span class="lineup"><span class="in">zelectronics.co</span></span></div>
           <div><span class="lineup"><span class="in">+91 84518 64754</span></span></div>
@@ -195,8 +222,8 @@
         </div>
       </div></section>
 
-      <div id="grain" class="clip" data-start="0" data-duration="31.5" data-track-index="2" style="background-color:transparent"></div>
-      <audio id="mix" src="assets/audio.wav" data-start="0" data-duration="31.5" data-volume="1" data-track-index="1"></audio>
+      <div id="grain" class="clip" data-start="0" data-duration="36.5" data-track-index="2" style="background-color:transparent"></div>
+      <audio id="mix" src="assets/audio.wav" data-start="0" data-duration="36.5" data-volume="1" data-track-index="1"></audio>
     </div>
 
     <script>
@@ -209,6 +236,7 @@
         cal: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M10 13.5l4 4M14 13.5l-4 4"/>',
         hour: '<path d="M6 3h12M6 21h12M7 3v1c0 3.5 5 5 5 8c0-3 5-4.5 5-8V3M7 21v-1c0-3.5 5-5 5-8c0 3 5 4.5 5 8v1"/>',
         laptop: '<rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/>',
+        desktop: '<rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/>',
         up: '<path d="M12 19V5M6 11l6-6 6 6"/>',
       };
       const icon = (k, size, sw = 1.5) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${IC[k]}</svg>`;
@@ -228,7 +256,7 @@
           s += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000" stroke-opacity="${a > -45 ? 0.9 : 0.35}" stroke-width="${long ? 5 : 2.5}"/>`;
         }
         const [ax, ay] = pt(R, -45), [bx, by] = pt(R, -2);
-        s += `<path class="hot" d="M${ax} ${ay} A${R} ${R} 0 0 1 ${bx} ${by}" fill="none" stroke="#000" stroke-width="18" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`;
+        s += `<path class="hot" d="M${ax} ${ay} A${R} ${R} 0 0 1 ${bx} ${by}" fill="none" stroke="#E10600" stroke-width="18" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`;
         // needle (points along +x before rotation)
         s += `<g class="needle"><path d="M${C - 60} ${C} L${C + 120} ${C - 16} L${C + 640} ${C} L${C + 120} ${C + 16} Z" fill="#000"/><circle cx="${C}" cy="${C}" r="38" fill="#000"/><circle cx="${C}" cy="${C}" r="14" fill="#fff"/></g>`;
         document.querySelector("#s2 .gauge").innerHTML = s;
@@ -251,6 +279,10 @@
           <div style="flex:1"><div class="t1">${c.t}</div><div class="t2">Price updated</div><div class="bar" style="width:${70 - i * 12}%"></div></div>
           <div class="up">${icon("up", 34, 2.4)}</div>
         </div>`).join("");
+
+      // S10 laptop / desktop tiles
+      document.querySelector("#s10 .t0 .sq").innerHTML = icon("laptop", 150, 1.4);
+      document.querySelector("#s10 .t1 .sq").innerHTML = icon("desktop", 150, 1.4);
 
       // S6 hexagon network
       (() => {
@@ -295,7 +327,15 @@
         [...txt].forEach((c) => { const s = document.createElement("span"); s.className = "ch"; s.textContent = c; el.appendChild(s); });
         return el.querySelectorAll(".ch");
       }
-      ["#s1 .l2", "#s3 .h2", "#s4 .ty", "#s9 .tw", "#end .brand", "#s5 .m2", "#s7 .w3"].forEach((s) => splitChars(document.querySelector(s)));
+      ["#s1 .l2", "#s3 .h2", "#end .brand", "#s5 .m2", "#s7 .w3"].forEach((s) => splitChars(document.querySelector(s)));
+      function makeTyper(el) {
+        const txt = el.textContent.trim();
+        el.innerHTML = `<span class="twbox"><span class="ghost"></span><span class="live"><span class="tx"></span><span class="cursor"></span></span></span>`;
+        el.querySelector(".ghost").textContent = txt;
+        el.querySelector(".tx").textContent = txt;
+        splitChars(el.querySelector(".tx"));
+      }
+      ["#s4 .ty", "#s9 .line1"].forEach((s) => makeTyper(document.querySelector(s)));
 
       // ---------- timeline ----------
       const tl = gsap.timeline({ paused: true });
@@ -317,10 +357,13 @@
           { yPercent: (i) => (i % 2 ? 60 : -60), rotation: (i) => (i % 2 ? 14 : -14), scaleY: 1.7, filter: "blur(10px)", opacity: 0 },
           { yPercent: 0, rotation: 0, scaleY: 1, filter: "blur(0px)", opacity: 1, duration: 0.26, ease: "expo.out", stagger }, t);
       }
-      function type(el, t, step) {
-        const chs = el.querySelectorAll(".ch");
-        tl.set(chs, { opacity: 0 }, 0);
-        chs.forEach((c, i) => tl.set(c, { opacity: 1 }, t + i * step));
+      // typewriter: letters go from display:none to inline-block so the cursor rides behind the last one,
+      // then the cursor blinks until `until`
+      function type(el, t, step, until) {
+        const chs = el.querySelectorAll(".live .ch"), cur = el.querySelector(".cursor");
+        tl.set(chs, { display: "none" }, 0);
+        chs.forEach((c, i) => tl.set(c, { display: "inline-block" }, t + i * step));
+        for (let k = 0, b = t + chs.length * step + 0.1; b < until; k++, b += 0.26) tl.set(cur, { opacity: k % 2 ? 1 : 0 }, b);
       }
       function draw(el, t, dur, ease = "power2.inOut") {
         tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.01 }, t);
@@ -330,93 +373,104 @@
         els.forEach((el, i) => tl.to(el, { yPercent: 0, duration: 0.4, ease: "expo.out" }, t + i * gap));
       }
 
-      // S1  (VO +0.2: "laptops" 0.48, "are" 0.9, "expensive" 1.28)
+      // All cue times = word start in assets/vo-friday-v2.mp3 (whisper) + 0.2 s VO offset.
+      // S1  ("laptops" 0.54, "are" 1.02, "expensive" 1.46; "because" 2.14)
       tl.fromTo("#s1 .big", { scale: 1.08, filter: "blur(0px)", opacity: 1 }, { scale: 1, filter: "blur(0px)", opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
       tl.fromTo("#s1 .a", { scale: 1, opacity: 1 }, { scale: 0.42, opacity: 0, filter: "blur(8px)", duration: 0.28, ease: "power3.in", immediateRender: false }, 0.82);
       tl.fromTo("#s1 .l1", { opacity: 0, y: 30, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, 0.95);
-      warp(q("#s1 .l2"), 1.24, 0.025);
-      tl.fromTo("#s1 .g1", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "expo.out" }, 1.2);
-      qa("#s1 .rupee").forEach((r, i) => tl.fromTo(r, { y: 40, opacity: 0, scale: 0.6 }, { y: -260 - (i % 3) * 60, opacity: 0, scale: 1, duration: 1.0, ease: "power1.out", keyframes: { opacity: [0, +r.style.opacity, +r.style.opacity, 0] } }, 1.3 + i * 0.05));
+      warp(q("#s1 .l2"), 1.4, 0.014); // lands by ~1.8 and holds sharp until the exit at 2.12
+      tl.fromTo("#s1 .g1", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "expo.out" }, 1.45);
+      qa("#s1 .rupee").forEach((r, i) => tl.fromTo(r, { y: 40, opacity: 0, scale: 0.6 }, { y: -260 - (i % 3) * 60, opacity: 0, scale: 1, duration: 1.0, ease: "power1.out", keyframes: { opacity: [0, +r.style.opacity, +r.style.opacity, 0] } }, 1.55 + i * 0.05));
 
-      // S2  gauge needle sweeps into the black "high" zone ("because" 1.7, "every gigabyte" 2.36)
-      tl.fromTo("#s2 .gauge", { rotation: 14 }, { rotation: 0, duration: 2.25, ease: "power2.out" }, 1.65);
-      tl.fromTo("#s2 .needle", { rotation: -150 }, { rotation: -14, duration: 1.9, ease: "power3.inOut", svgOrigin: "800 800" }, 1.7);
-      draw(q("#s2 .hot"), 2.6, 0.9);
-      blurIn(q("#s2 .t1"), 1.72, 1.2, 0.3);
-      blurIn(q("#s2 .t2"), 2.34, 1.3, 0.36);
-      tl.fromTo("#s2 .t3", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 2.45);
+      // S2  gauge needle sweeps into the red "high" zone ("because" 2.14, "every gigabyte" 2.84, "of RAM" 3.8)
+      tl.fromTo("#s2 .gauge", { rotation: 14 }, { rotation: 0, duration: 2.45, ease: "power2.out" }, 2.3);
+      tl.fromTo("#s2 .needle", { rotation: -150 }, { rotation: -14, duration: 2.0, ease: "power3.inOut", svgOrigin: "800 800" }, 2.32);
+      draw(q("#s2 .hot"), 3.1, 0.9);
+      blurIn(q("#s2 .t1"), 2.32, 1.2, 0.28);
+      blurIn(q("#s2 .t2"), 2.84, 1.3, 0.36);
+      tl.fromTo("#s2 .t3", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 3.0);
       // whip exit into S3
-      tl.fromTo("#s2 .stage", { rotation: 0, scale: 1, opacity: 1, filter: "blur(0px)" }, { rotation: -10, scale: 1.25, opacity: 0, filter: "blur(16px)", duration: 0.25, ease: "power2.in", immediateRender: false }, 3.65);
+      tl.fromTo("#s2 .stage", { rotation: 0, scale: 1, opacity: 1, filter: "blur(0px)" }, { rotation: -10, scale: 1.25, opacity: 0, filter: "blur(16px)", duration: 0.25, ease: "power2.in", immediateRender: false }, 4.5);
 
-      // S3  ("every SSD" 4.02, "every chip inside" 5.28)
-      blurIn(q("#s3 .h1"), 4.0, 1.3, 0.32);
-      warp(q("#s3 .h2"), 5.26, 0.018);
+      // S3  ("every SSD" 4.88, "every chip inside" 6.04)
+      blurIn(q("#s3 .h1"), 4.85, 1.3, 0.32);
+      warp(q("#s3 .h2"), 5.9, 0.018);
       const ics = qa("#s3 .ic");
-      [0, 4, 1, 3].forEach((k, i) => tl.fromTo(ics[k], { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.34, ease: "back.out(2.4)" }, 4.02 + i * 0.07));
-      tl.fromTo(ics[2], { scale: 0, opacity: 0, rotation: -20 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.45, ease: "back.out(2.2)" }, 5.28);
-      tl.fromTo("#s3 .frame", { scale: 1.12, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 3.95);
-      tl.fromTo("#s3 .c1", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 4.4);
+      [0, 4, 1, 3].forEach((k, i) => tl.fromTo(ics[k], { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.34, ease: "back.out(2.4)" }, 4.88 + i * 0.07));
+      tl.fromTo(ics[2], { scale: 0, opacity: 0, rotation: -20 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.45, ease: "back.out(2.2)" }, 6.04);
+      tl.fromTo("#s3 .frame", { scale: 1.12, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 4.8);
+      tl.fromTo("#s3 .c1", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 5.25);
 
-      // S4  typewriter "Costs more than ever." 6.4, 21 chars @0.045
-      type(q("#s4 .ty"), 6.4, 0.045);
+      // S4  typewriter "Costs more than ever." ("costs" 7.18, "ever" 8.34), 21 chars @0.055
+      type(q("#s4 .ty"), 7.18, 0.055, 8.95);
       qa("#s4 .card").forEach((c, i) => {
-        tl.fromTo(c, { opacity: 0, y: 80, filter: "blur(12px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 6.45 + i * 0.3);
-        tl.fromTo(c.querySelector(".up"), { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, 6.7 + i * 0.3);
-        tl.fromTo(c, { x: 0 }, { x: i % 2 ? -30 : 30, duration: 1.8, ease: "none" }, 6.3);
+        tl.fromTo(c, { opacity: 0, y: 80, filter: "blur(12px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 7.25 + i * 0.3);
+        tl.fromTo(c.querySelector(".up"), { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, 7.5 + i * 0.3);
+        tl.fromTo(c, { x: 0 }, { x: i % 2 ? -30 : 30, duration: 2.05, ease: "none" }, 7.1);
       });
 
-      // S5  counter ("memory" 8.22; roll 8.32-9.72; "more than doubled" 9.34)
-      blurIn(q("#s5 .m1"), 8.2, 1.2, 0.3);
-      draw(q("#s5 .arc"), 8.32, 1.4, "power2.inOut");
+      // S5  counter ("memory" 9.26; roll 9.4-10.8; "more than doubled" 10.18)
+      blurIn(q("#s5 .m1"), 9.24, 1.2, 0.3);
+      draw(q("#s5 .arc"), 9.4, 1.4, "power2.inOut");
       const ctr = { v: 1 }, numEl = q("#s5 .num");
-      tl.fromTo(ctr, { v: 1 }, { v: 2, duration: 1.4, ease: "power2.inOut", onUpdate: () => { numEl.textContent = (ctr.v >= 1.995 ? "2" : ctr.v.toFixed(1)) + "×"; } }, 8.32);
-      tl.fromTo("#s5 .num", { filter: "blur(0px)" }, { keyframes: { filter: ["blur(0px)", "blur(3px)", "blur(0px)"] }, duration: 1.4 }, 8.32);
-      tl.fromTo("#s5 .plus", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.36, ease: "back.out(3)" }, 9.72);
-      tl.fromTo("#s5 .g5", { scale: 0.6, opacity: 0 }, { keyframes: { scale: [0.6, 1.15, 1], opacity: [0, 1, 0.6] }, duration: 0.7 }, 9.65);
-      warp(q("#s5 .m2"), 9.32, 0.016);
+      tl.fromTo(ctr, { v: 1 }, { v: 2, duration: 1.4, ease: "power2.inOut", onUpdate: () => { numEl.textContent = (ctr.v >= 1.995 ? "2" : ctr.v.toFixed(1)) + "×"; } }, 9.4);
+      tl.fromTo("#s5 .num", { filter: "blur(0px)" }, { keyframes: { filter: ["blur(0px)", "blur(3px)", "blur(0px)"] }, duration: 1.4 }, 9.4);
+      tl.fromTo("#s5 .plus", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.36, ease: "back.out(3)" }, 10.8);
+      tl.fromTo("#s5 .g5", { scale: 0.6, opacity: 0 }, { keyframes: { scale: [0.6, 1.15, 1], opacity: [0, 1, 0.6] }, duration: 0.7 }, 10.72);
+      warp(q("#s5 .m2"), 10.16, 0.016);
 
-      // S6  hexagons (10.58, 11.74, 12.92)
-      [10.45, 11.74, 12.92].forEach((t, i) => {
+      // S6  hexagons ("money lost" 11.9, "upgrades delayed" 12.88, "work slowed down" 14.22)
+      [11.88, 12.86, 14.2].forEach((t, i) => {
         tl.fromTo(`#s6 .hx${i}`, { scale: 0, rotation: -30, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.45, ease: "back.out(2)" }, t);
         draw(q(`#s6 .cn${i}`), t + 0.12, 0.35, "power2.out");
         tl.fromTo(`#s6 .l${i}`, { opacity: 0, y: i === 2 ? -20 : 20, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, t + 0.3);
       });
-      tl.fromTo("#s6 .stage", { y: 0 }, { y: -40, duration: 4.05, ease: "none" }, 10.4);
+      tl.fromTo("#s6 .stage", { y: 0 }, { y: -40, duration: 4.3, ease: "none" }, 11.45);
 
-      // S7  word by word ("The" 14.58, "smartest" 14.66, "buyers" 14.98, "aren't paying more" 15.38)
-      [14.46, 14.64, 14.98].forEach((t, i) => blurIn(q(`#s7 .w${i}`), t, 1.4, 0.3));
+      // S7  word by word ("The" 15.84, "smartest" 15.96, "buyers" 16.34, "aren't paying more" 16.78)
+      [15.8, 15.96, 16.32].forEach((t, i) => blurIn(q(`#s7 .w${i}`), t, 1.4, 0.3));
       qa("#s7 .w0, #s7 .w1, #s7 .w2").forEach((w) => (w.style.display = "inline-block"));
-      warp(q("#s7 .w3"), 15.36, 0.02);
+      warp(q("#s7 .w3"), 16.76, 0.02);
 
-      // S8  pills (16.8, 18.44, 19.16, 20.0, 21.14, 22.42)
-      [16.8, 18.44, 19.16, 20.0, 21.14, 22.42].forEach((t, i) => {
+      // S8  pills (refurbished 18.38, tested 20.62, certified 21.12, same performance 22.1, warranty 23.12, fraction 24.64)
+      [18.38, 20.6, 21.1, 22.08, 23.1, 24.62].forEach((t, i) => {
         tl.fromTo(`#s8 .p${i}`, { x: 260, opacity: 0, filter: "blur(10px)", scale: 0.9 }, { x: 0, opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.42, ease: "expo.out" }, t);
       });
-      tl.fromTo("#s8 .p5", { boxShadow: "0 0 0 0 rgba(0,0,0,0)" }, { boxShadow: "0 0 0 18px rgba(0,0,0,0.08)", duration: 0.5, ease: "expo.out" }, 22.6);
-      tl.fromTo("#s8 .rb1", { x: 0, y: 0 }, { x: -160, y: 120, duration: 7.15, ease: "none" }, 16.65);
-      tl.fromTo("#s8 .rb2", { x: 0, y: 0 }, { x: 200, y: -140, duration: 7.15, ease: "none" }, 16.65);
-      tl.fromTo("#s8 .stack", { y: 160 }, { y: -40, duration: 7.15, ease: "power1.inOut" }, 16.65);
+      tl.fromTo("#s8 .p5", { boxShadow: "0 0 0 0 rgba(0,0,0,0)" }, { boxShadow: "0 0 0 18px rgba(0,0,0,0.08)", duration: 0.5, ease: "expo.out" }, 24.8);
+      tl.fromTo("#s8 .rb1", { x: 0, y: 0 }, { x: -160, y: 120, duration: 7.9, ease: "none" }, 18.3);
+      tl.fromTo("#s8 .rb2", { x: 0, y: 0 }, { x: 200, y: -140, duration: 7.9, ease: "none" }, 18.3);
+      tl.fromTo("#s8 .stack", { y: 160 }, { y: -40, duration: 7.9, ease: "power1.inOut" }, 18.3);
 
-      // S9  typewriter 23.96 (31 chars @0.05) -> "Smart is." 26.12, ellipse 26.35
-      type(q("#s9 .tw"), 23.96, 0.05);
-      tl.fromTo("#s9 .c9", { opacity: 1 }, { keyframes: { opacity: [1, 0, 1, 0, 1, 0] }, duration: 2.0, ease: "steps(6)" }, 23.8);
-      tl.fromTo("#s9 .line1", { x: 0, opacity: 1, filter: "blur(0px)" }, { x: -820, opacity: 0.25, filter: "blur(3px)", duration: 0.45, ease: "power3.inOut", immediateRender: false }, 25.95);
-      blurIn(q("#s9 .smart"), 26.1, 1.6, 0.4);
-      draw(q("#s9 .ell path"), 26.35, 0.6, "power2.out");
-      tl.fromTo("#s9 .g9", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "expo.out" }, 26.3);
+      // S9  typewriter ("because" 26.36, 31 chars @0.05) -> "Smart is." 29.08, ellipse 29.3
+      type(q("#s9 .line1"), 26.36, 0.05, 28.75);
+      tl.fromTo("#s9 .line1", { x: 0, opacity: 1, filter: "blur(0px)" }, { x: -820, opacity: 0, filter: "blur(6px)", duration: 0.3, ease: "power3.in", immediateRender: false }, 28.75);
+      blurIn(q("#s9 .smart"), 29.06, 1.6, 0.4);
+      draw(q("#s9 .ell path"), 29.3, 0.6, "power2.out");
+      tl.fromTo("#s9 .g9", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "expo.out" }, 29.25);
 
-      // END CARD 27.65 ("ZELECTRONICS" spoken 27.96)
-      tl.fromTo("#end .tile", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.55, ease: "back.out(2.4)" }, 27.7);
-      tl.fromTo("#end .dial", { rotation: 0, scale: 0.7, opacity: 0 }, { rotation: 40, scale: 1, opacity: 0.12, duration: 3.85, ease: "power1.out" }, 27.65);
+      // S10 CTA + END ("shop certified" 30.32, "refurbished" 30.96, "laptops" 31.58, "desktops" 32.24, "at" 32.78, "Zelectronics" 33.0)
+      // keep equal to the cue list in tools/make_audio.py
+      const T = { shop: 30.3, refurb: 30.94, laptops: 31.56, desktops: 32.1, end: 32.95, brand: 33.05 };
+      blurIn(q("#s10 .c1"), T.shop, 1.3, 0.32);
+      blurIn(q("#s10 .c2"), T.refurb, 1.35, 0.32);
+      ["laptops", "desktops"].forEach((w, i) => {
+        tl.fromTo(`#s10 .t${i} .sq`, { scale: 0, opacity: 0, rotation: -14 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.45, ease: "back.out(2.2)" }, T[w]);
+        tl.fromTo(`#s10 .t${i} .lab`, { opacity: 0, y: 24, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.3, ease: "expo.out" }, T[w] + 0.12);
+      });
+      tl.fromTo("#s10 .g10", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "expo.out" }, T.laptops);
+
+      // END CARD (brand letters land on the spoken "Zelectronics")
+      tl.fromTo("#end .tile", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.55, ease: "back.out(2.4)" }, T.end + 0.05);
+      tl.fromTo("#end .dial", { rotation: 0, scale: 0.7, opacity: 0 }, { rotation: 40, scale: 1, opacity: 0.12, duration: 3.55, ease: "power1.out" }, T.end);
       tl.fromTo("#end .brand .ch",
         { yPercent: (i) => (i % 2 ? 90 : -90), scaleY: 1.8, filter: "blur(10px)", opacity: 0 },
-        { yPercent: 0, scaleY: 1, filter: "blur(0px)", opacity: 1, duration: 0.42, ease: "expo.out", stagger: 0.04 }, 28.1);
-      tl.fromTo("#end .brule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 28.7);
-      rise(qa("#end .tag .in"), 28.8);
-      rise(qa("#end .contact .in"), 29.05, 0.1);
+        { yPercent: 0, scaleY: 1, filter: "blur(0px)", opacity: 1, duration: 0.42, ease: "expo.out", stagger: 0.04 }, T.brand);
+      tl.fromTo("#end .brule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, T.brand + 0.6);
+      rise(qa("#end .tag .in"), T.brand + 0.7);
+      rise(qa("#end .contact .in"), T.brand + 0.95, 0.1);
 
       // grain shimmer
-      tl.fromTo("#grain", { x: 0, y: 0 }, { x: 80, y: -54, duration: 31.5, ease: "steps(250)" }, 0);
+      tl.fromTo("#grain", { x: 0, y: 0 }, { x: 80, y: -54, duration: 36.5, ease: "steps(292)" }, 0);
 
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;

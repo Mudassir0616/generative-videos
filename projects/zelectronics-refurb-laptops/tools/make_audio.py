@@ -1,44 +1,47 @@
-"""Audio for the ZELECTRONICS refurbished-laptops reel (31.5 s).
+"""Audio for the ZELECTRONICS refurbished-laptops reel (36.5 s).
 
-Voiceover: Friday (ElevenLabs, voice id hJahZg6VJqF122vA08G4), assets/vo-friday.mp3.
-  - placed at OFF = 0.2 s
-  - a 0.6 s pause is inserted at VO time 27.0 s (between "smart is." and "ZELECTRONICS")
+Voiceover: Friday v2 (ElevenLabs, voice id ka2YlHIZtpI73mTUG5iF), assets/vo-friday-v2.mp3
+  (full read incl. "Shop certified refurbished laptops and desktops at Zelectronics."), placed at OFF = 0.2 s.
 Music: light, fully synthesized bed (soft pad + gentle arp + quiet pulse, 120 BPM), ducked under the voice.
-SFX: whoosh + tick on every scene change, pops for hexagons/pills, type clicks, counter ticks,
+SFX: whoosh + tick on every scene change, pops for hexagons/pills/CTA tiles, type clicks, counter ticks,
      riser + soft impact into the end card.
 
-CUE TIMES BELOW ARE ABSOLUTE VIDEO TIME and must match index.html.
-usage: python3 tools/make_audio.py assets/vo-friday.mp3 assets/audio.wav
+Word times are VO-file times from a whisper transcript; CUTS/END are absolute video time.
+All of them must match index.html.
+usage: python tools/make_audio.py assets/vo-friday-v2.mp3 assets/audio.wav
+       (set FFMPEG=<path to ffmpeg> if ffmpeg is not on PATH)
 """
+import os
 import subprocess
 import sys
 import wave
 
 import numpy as np
 
+FF = os.environ.get("FFMPEG", "ffmpeg")
 SR = 48000
-DUR = 31.5
+DUR = 36.5
 N = int(SR * DUR)
 OFF = 0.2
-GAP_AT, GAP = 27.0, 0.6  # VO time of the cut, inserted silence
 rng = np.random.default_rng(7)
 
 
 def vo_abs(t):
     """VO-file time -> absolute video time."""
-    return t + OFF + (GAP if t >= GAP_AT else 0.0)
+    return t + OFF
 
 
 # scene starts (absolute)
-CUTS = [1.65, 3.9, 6.3, 8.1, 10.4, 14.45, 16.65, 23.8, 27.65]
-HEX = [vo_abs(t) for t in (10.38, 11.54, 12.72)]
-PILLS = [vo_abs(t) for t in (16.6, 18.24, 18.96, 19.8, 20.94, 22.22)]
-ICONS = [vo_abs(3.82), vo_abs(5.08)]
-TYPE1 = (vo_abs(6.2), 21, 0.045)  # "Costs more than ever." start, chars, step
-TYPE2 = (vo_abs(23.76), 31, 0.05)  # "Because new isn't an advantage."
-COUNTER = (vo_abs(8.02) + 0.1, 1.4)  # counter roll start, duration
-SMART = vo_abs(25.92)
-END = 27.65
+CUTS = [2.3, 4.75, 7.1, 9.15, 11.45, 15.75, 18.3, 26.2, 30.2, 32.95]
+HEX = [vo_abs(t) for t in (11.68, 12.66, 14.0)]
+PILLS = [vo_abs(t) for t in (18.18, 20.4, 20.9, 21.88, 22.9, 24.42)]
+ICONS = [vo_abs(4.68), vo_abs(5.84)]
+TYPE1 = (7.18, 21, 0.055)  # "Costs more than ever." start, chars, step
+TYPE2 = (26.36, 31, 0.05)  # "Because new isn't an advantage."
+COUNTER = (9.4, 1.4)  # counter roll start, duration
+SMART = vo_abs(28.88)
+CTA_POPS = [vo_abs(31.36), vo_abs(31.9)]  # "laptops", "desktops" tiles
+END = 32.95
 
 L = np.zeros(N)
 R = np.zeros(N)
@@ -191,6 +194,8 @@ for i, t in enumerate(PILLS):
     add(pop(0.9), t, 1.0, 0.3 if i % 2 else -0.3)
 for t in ICONS:
     add(pop(0.8), t)
+for i, t in enumerate(CTA_POPS):
+    add(pop(1.0), t, 1.0, -0.25 if i == 0 else 0.25)
 for (t0, n, step) in (TYPE1, TYPE2):
     for i in range(n):
         add(type_click(), t0 + i * step, 1.0, 0.1)
@@ -208,11 +213,9 @@ for i in range(12):  # brand letters
 sfx_L, sfx_R = L.copy(), R.copy()
 
 # ---------- voiceover ----------
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", sys.argv[1], "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+raw = subprocess.run([FF, "-v", "error", "-i", sys.argv[1], "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
                      capture_output=True, check=True).stdout
 vo_src = np.frombuffer(raw, np.float32).astype(np.float64)
-cut = int(GAP_AT * SR)
-vo_src = np.concatenate([vo_src[:cut], np.zeros(int(GAP * SR)), vo_src[cut:]])
 vo = np.zeros(N)
 i0 = int(OFF * SR)
 vo[i0:i0 + len(vo_src)] = vo_src[: N - i0]
@@ -235,13 +238,14 @@ fade[-fo:] = np.linspace(1, 0, fo) ** 1.5
 mix *= fade[:, None]
 mix *= 0.89 / np.abs(mix).max()
 
-tmp = sys.argv[2] + ".tmp.wav"
+out = sys.argv[2]
+tmp = out + ".tmp.wav"
 with wave.open(tmp, "wb") as w:
     w.setnchannels(2)
     w.setsampwidth(2)
     w.setframerate(SR)
     w.writeframes((mix * 32767).astype("<i2").tobytes())
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", str(SR),
-                "-c:a", "pcm_s16le", sys.argv[2]], check=True)
-subprocess.run(["rm", "-f", tmp])
-print("wrote", sys.argv[2])
+subprocess.run([FF, "-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", str(SR),
+                "-c:a", "pcm_s16le", out], check=True)
+os.remove(tmp)
+print("wrote", out)

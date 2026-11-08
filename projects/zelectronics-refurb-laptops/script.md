@@ -35,7 +35,11 @@ The reference is one continuous shot with no hard cuts, and every voice line get
 > They're buying refurbished. Tested. Certified. Same performance. Backed by warranty. A fraction of the price.
 > Because new isn't an advantage.
 > Smart is.
-> ZELECTRONICS.
+> Shop certified refurbished laptops and desktops at ZELECTRONICS.
+
+Draft 2 uses one new full read of this script by Friday v2 (`assets/vo-friday-v2.mp3`, voice id `ka2YlHIZtpI73mTUG5iF`, 33.9 s). Video is 36.5 s; scene and cue times come from a whisper transcript of that file (+0.2 s) and live in `index.html` / `tools/make_audio.py`. The cue sheet below is the draft 1 (Friday v1) timing.
+
+**Colour accents (draft 2):** red `#E10600` = the problem (expensive, ₹, gauge high zone, price-up arrows, "+" badge); blue `#3E77EE` = the answer ("aren't paying more", "They're buying refurbished" pill, "Smart is." ellipse, "certified", end-card rule). Max one accent per scene; everything else stays black and white.
 
 ## Shot list
 
@@ -75,4 +79,5 @@ The voiceover drives the timing. The shot times above are replaced by these.
 | 8 | Pills ×6 | refurbished / tested / certified / same performance / warranty / fraction | 16.60 / 18.24 / 18.96 / 19.80 / 20.94 / 22.22 |
 | 9 | Typewriter | "Because new isn't an advantage" | 23.76 |
 | 10 | Circled punchline | "Smart is." | 25.92 |
-| 11 | End card | "ZELECTRONICS" | ~26.8, hold until ~30.0 |
+| 11 | Call to action (laptop + desktop tiles) | "Shop certified refurbished laptops and desktops" | video 27.2 (provisional) |
+| 12 | End card | "at ZELECTRONICS" | video 29.9 (provisional), hold until 33.5 |
