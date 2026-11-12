@@ -1,0 +1,845 @@
+{
+ "model": "faster-whisper small (CPU int8, word_timestamps=True, audio decoded by ffmpeg to 16 kHz mono f32)",
+ "words": [
+  {
+   "w": "Three",
+   "start": 0.0,
+   "end": 0.18
+  },
+  {
+   "w": "Claude",
+   "start": 0.18,
+   "end": 0.6
+  },
+  {
+   "w": "code",
+   "start": 0.6,
+   "end": 0.78
+  },
+  {
+   "w": "skills",
+   "start": 0.78,
+   "end": 1.06
+  },
+  {
+   "w": "that",
+   "start": 1.06,
+   "end": 1.42
+  },
+  {
+   "w": "make",
+   "start": 1.42,
+   "end": 1.66
+  },
+  {
+   "w": "you",
+   "start": 1.66,
+   "end": 1.78
+  },
+  {
+   "w": "look",
+   "start": 1.78,
+   "end": 1.98
+  },
+  {
+   "w": "like",
+   "start": 1.98,
+   "end": 2.12
+  },
+  {
+   "w": "a",
+   "start": 2.12,
+   "end": 2.2
+  },
+  {
+   "w": "designer",
+   "start": 2.2,
+   "end": 2.56
+  },
+  {
+   "w": "overnight.",
+   "start": 2.56,
+   "end": 3.08
+  },
+  {
+   "w": "First,",
+   "start": 3.44,
+   "end": 3.68
+  },
+  {
+   "w": "Taste",
+   "start": 4.04,
+   "end": 4.16
+  },
+  {
+   "w": "Skill.",
+   "start": 4.16,
+   "end": 4.52
+  },
+  {
+   "w": "AI",
+   "start": 4.78,
+   "end": 5.08
+  },
+  {
+   "w": "interfaces",
+   "start": 5.08,
+   "end": 5.6
+  },
+  {
+   "w": "all",
+   "start": 5.6,
+   "end": 6.08
+  },
+  {
+   "w": "have",
+   "start": 6.08,
+   "end": 6.28
+  },
+  {
+   "w": "the",
+   "start": 6.28,
+   "end": 6.42
+  },
+  {
+   "w": "same",
+   "start": 6.42,
+   "end": 6.66
+  },
+  {
+   "w": "tell.",
+   "start": 6.66,
+   "end": 6.92
+  },
+  {
+   "w": "Same",
+   "start": 7.24,
+   "end": 7.44
+  },
+  {
+   "w": "fonts,",
+   "start": 7.44,
+   "end": 7.86
+  },
+  {
+   "w": "same",
+   "start": 8.22,
+   "end": 8.36
+  },
+  {
+   "w": "gradients,",
+   "start": 8.36,
+   "end": 8.9
+  },
+  {
+   "w": "same",
+   "start": 9.16,
+   "end": 9.38
+  },
+  {
+   "w": "a",
+   "start": 9.38,
+   "end": 9.6
+  },
+  {
+   "w": "machine",
+   "start": 9.6,
+   "end": 9.98
+  },
+  {
+   "w": "made",
+   "start": 9.98,
+   "end": 10.38
+  },
+  {
+   "w": "this",
+   "start": 10.38,
+   "end": 10.6
+  },
+  {
+   "w": "energy.",
+   "start": 10.6,
+   "end": 10.98
+  },
+  {
+   "w": "Taste",
+   "start": 11.26,
+   "end": 11.44
+  },
+  {
+   "w": "Skill",
+   "start": 11.44,
+   "end": 11.86
+  },
+  {
+   "w": "fixes",
+   "start": 11.86,
+   "end": 12.22
+  },
+  {
+   "w": "the",
+   "start": 12.22,
+   "end": 12.5
+  },
+  {
+   "w": "root",
+   "start": 12.5,
+   "end": 12.68
+  },
+  {
+   "w": "cause.",
+   "start": 12.68,
+   "end": 13.06
+  },
+  {
+   "w": "It",
+   "start": 13.4,
+   "end": 13.5
+  },
+  {
+   "w": "gives",
+   "start": 13.5,
+   "end": 13.74
+  },
+  {
+   "w": "Claude",
+   "start": 13.74,
+   "end": 14.1
+  },
+  {
+   "w": "an",
+   "start": 14.1,
+   "end": 14.2
+  },
+  {
+   "w": "actual",
+   "start": 14.2,
+   "end": 14.6
+  },
+  {
+   "w": "aesthetic",
+   "start": 14.6,
+   "end": 14.96
+  },
+  {
+   "w": "opinion.",
+   "start": 14.96,
+   "end": 15.42
+  },
+  {
+   "w": "So",
+   "start": 15.7,
+   "end": 15.78
+  },
+  {
+   "w": "what",
+   "start": 15.78,
+   "end": 15.92
+  },
+  {
+   "w": "comes",
+   "start": 15.92,
+   "end": 16.16
+  },
+  {
+   "w": "out",
+   "start": 16.16,
+   "end": 16.4
+  },
+  {
+   "w": "looks",
+   "start": 16.4,
+   "end": 16.62
+  },
+  {
+   "w": "like",
+   "start": 16.62,
+   "end": 16.82
+  },
+  {
+   "w": "a",
+   "start": 16.82,
+   "end": 16.9
+  },
+  {
+   "w": "human",
+   "start": 16.9,
+   "end": 17.16
+  },
+  {
+   "w": "designer",
+   "start": 17.16,
+   "end": 17.58
+  },
+  {
+   "w": "touched",
+   "start": 17.58,
+   "end": 17.94
+  },
+  {
+   "w": "it.",
+   "start": 17.94,
+   "end": 18.18
+  },
+  {
+   "w": "Second,",
+   "start": 18.3,
+   "end": 18.62
+  },
+  {
+   "w": "Emil",
+   "start": 18.94,
+   "end": 19.1
+  },
+  {
+   "w": "Kowalski's",
+   "start": 19.1,
+   "end": 19.86
+  },
+  {
+   "w": "Motion",
+   "start": 19.86,
+   "end": 20.08
+  },
+  {
+   "w": "Skill.",
+   "start": 20.08,
+   "end": 20.46
+  },
+  {
+   "w": "Static",
+   "start": 20.78,
+   "end": 21.14
+  },
+  {
+   "w": "UIs",
+   "start": 21.14,
+   "end": 21.68
+  },
+  {
+   "w": "feel",
+   "start": 21.68,
+   "end": 21.96
+  },
+  {
+   "w": "flat",
+   "start": 21.96,
+   "end": 22.36
+  },
+  {
+   "w": "because",
+   "start": 22.36,
+   "end": 22.64
+  },
+  {
+   "w": "nothing",
+   "start": 22.64,
+   "end": 22.92
+  },
+  {
+   "w": "moves,",
+   "start": 22.92,
+   "end": 23.48
+  },
+  {
+   "w": "nothing",
+   "start": 23.72,
+   "end": 23.88
+  },
+  {
+   "w": "responds.",
+   "start": 23.88,
+   "end": 24.28
+  },
+  {
+   "w": "One",
+   "start": 24.72,
+   "end": 24.86
+  },
+  {
+   "w": "command",
+   "start": 24.86,
+   "end": 25.22
+  },
+  {
+   "w": "and",
+   "start": 25.22,
+   "end": 25.5
+  },
+  {
+   "w": "Claude",
+   "start": 25.5,
+   "end": 25.88
+  },
+  {
+   "w": "starts",
+   "start": 25.88,
+   "end": 26.04
+  },
+  {
+   "w": "adding",
+   "start": 26.04,
+   "end": 26.38
+  },
+  {
+   "w": "real",
+   "start": 26.38,
+   "end": 26.72
+  },
+  {
+   "w": "motion,",
+   "start": 26.72,
+   "end": 27.14
+  },
+  {
+   "w": "intentional",
+   "start": 27.46,
+   "end": 27.88
+  },
+  {
+   "w": "easing,",
+   "start": 27.88,
+   "end": 28.48
+  },
+  {
+   "w": "animations",
+   "start": 28.48,
+   "end": 28.94
+  },
+  {
+   "w": "that",
+   "start": 28.94,
+   "end": 29.44
+  },
+  {
+   "w": "actually",
+   "start": 29.44,
+   "end": 29.8
+  },
+  {
+   "w": "make",
+   "start": 29.8,
+   "end": 30.0
+  },
+  {
+   "w": "sense,",
+   "start": 30.0,
+   "end": 30.34
+  },
+  {
+   "w": "interfaces",
+   "start": 30.56,
+   "end": 30.96
+  },
+  {
+   "w": "that",
+   "start": 30.96,
+   "end": 31.42
+  },
+  {
+   "w": "feel",
+   "start": 31.42,
+   "end": 31.7
+  },
+  {
+   "w": "alive.",
+   "start": 31.7,
+   "end": 32.18
+  },
+  {
+   "w": "Third,",
+   "start": 32.52,
+   "end": 32.82
+  },
+  {
+   "w": "Impeccable.",
+   "start": 33.16,
+   "end": 33.74
+  },
+  {
+   "w": "Twenty",
+   "start": 34.0,
+   "end": 34.22
+  },
+  {
+   "w": "commands",
+   "start": 34.22,
+   "end": 34.72
+  },
+  {
+   "w": "covering",
+   "start": 34.72,
+   "end": 35.14
+  },
+  {
+   "w": "typography,",
+   "start": 35.14,
+   "end": 35.86
+  },
+  {
+   "w": "color,",
+   "start": 36.16,
+   "end": 36.38
+  },
+  {
+   "w": "spacing",
+   "start": 36.72,
+   "end": 37.0
+  },
+  {
+   "w": "and",
+   "start": 37.0,
+   "end": 37.44
+  },
+  {
+   "w": "layout.",
+   "start": 37.44,
+   "end": 37.82
+  },
+  {
+   "w": "A",
+   "start": 38.1,
+   "end": 38.18
+  },
+  {
+   "w": "complete",
+   "start": 38.18,
+   "end": 38.56
+  },
+  {
+   "w": "design",
+   "start": 38.56,
+   "end": 38.96
+  },
+  {
+   "w": "system",
+   "start": 38.96,
+   "end": 39.34
+  },
+  {
+   "w": "handed",
+   "start": 39.34,
+   "end": 39.66
+  },
+  {
+   "w": "to",
+   "start": 39.66,
+   "end": 39.88
+  },
+  {
+   "w": "Claude",
+   "start": 39.88,
+   "end": 40.16
+  },
+  {
+   "w": "at",
+   "start": 40.16,
+   "end": 40.26
+  },
+  {
+   "w": "once.",
+   "start": 40.26,
+   "end": 40.54
+  },
+  {
+   "w": "Run",
+   "start": 40.84,
+   "end": 41.0
+  },
+  {
+   "w": "slash",
+   "start": 41.0,
+   "end": 41.36
+  },
+  {
+   "w": "polish",
+   "start": 41.36,
+   "end": 41.88
+  },
+  {
+   "w": "before",
+   "start": 41.88,
+   "end": 42.22
+  },
+  {
+   "w": "you",
+   "start": 42.22,
+   "end": 42.42
+  },
+  {
+   "w": "ship.",
+   "start": 42.42,
+   "end": 42.66
+  },
+  {
+   "w": "And",
+   "start": 42.78,
+   "end": 42.9
+  },
+  {
+   "w": "Claude",
+   "start": 42.9,
+   "end": 43.24
+  },
+  {
+   "w": "sweeps",
+   "start": 43.24,
+   "end": 43.58
+  },
+  {
+   "w": "your",
+   "start": 43.58,
+   "end": 43.7
+  },
+  {
+   "w": "entire",
+   "start": 43.7,
+   "end": 44.04
+  },
+  {
+   "w": "UI,",
+   "start": 44.04,
+   "end": 44.42
+  },
+  {
+   "w": "tightening",
+   "start": 44.82,
+   "end": 45.0
+  },
+  {
+   "w": "every",
+   "start": 45.0,
+   "end": 45.46
+  },
+  {
+   "w": "loose",
+   "start": 45.46,
+   "end": 45.8
+  },
+  {
+   "w": "detail",
+   "start": 45.8,
+   "end": 46.18
+  },
+  {
+   "w": "automatically.",
+   "start": 46.18,
+   "end": 46.86
+  },
+  {
+   "w": "Comment,",
+   "start": 47.02,
+   "end": 47.24
+  },
+  {
+   "w": "human.",
+   "start": 47.62,
+   "end": 47.86
+  },
+  {
+   "w": "And",
+   "start": 48.18,
+   "end": 48.24
+  },
+  {
+   "w": "I'll",
+   "start": 48.24,
+   "end": 48.36
+  },
+  {
+   "w": "send",
+   "start": 48.36,
+   "end": 48.54
+  },
+  {
+   "w": "you",
+   "start": 48.54,
+   "end": 48.7
+  },
+  {
+   "w": "my",
+   "start": 48.7,
+   "end": 48.84
+  },
+  {
+   "w": "e",
+   "start": 48.84,
+   "end": 49.08
+  },
+  {
+   "w": "-book.",
+   "start": 49.08,
+   "end": 49.24
+  },
+  {
+   "w": "They",
+   "start": 49.42,
+   "end": 49.52
+  },
+  {
+   "w": "will",
+   "start": 49.52,
+   "end": 49.64
+  },
+  {
+   "w": "never",
+   "start": 49.64,
+   "end": 49.96
+  },
+  {
+   "w": "know",
+   "start": 49.96,
+   "end": 50.28
+  },
+  {
+   "w": "AI",
+   "start": 50.28,
+   "end": 50.66
+  },
+  {
+   "w": "wrote",
+   "start": 50.66,
+   "end": 51.04
+  },
+  {
+   "w": "it.",
+   "start": 51.04,
+   "end": 51.2
+  },
+  {
+   "w": "A",
+   "start": 51.36,
+   "end": 51.52
+  },
+  {
+   "w": "simple",
+   "start": 51.52,
+   "end": 51.8
+  },
+  {
+   "w": "step",
+   "start": 51.8,
+   "end": 52.12
+  },
+  {
+   "w": "-by",
+   "start": 52.12,
+   "end": 52.3
+  },
+  {
+   "w": "-step",
+   "start": 52.3,
+   "end": 52.5
+  },
+  {
+   "w": "guide",
+   "start": 52.5,
+   "end": 52.84
+  },
+  {
+   "w": "to",
+   "start": 52.84,
+   "end": 53.04
+  },
+  {
+   "w": "make",
+   "start": 53.04,
+   "end": 53.16
+  },
+  {
+   "w": "AI",
+   "start": 53.16,
+   "end": 53.46
+  },
+  {
+   "w": "copies",
+   "start": 53.46,
+   "end": 53.88
+  },
+  {
+   "w": "sound",
+   "start": 53.88,
+   "end": 54.24
+  },
+  {
+   "w": "100",
+   "start": 54.24,
+   "end": 54.76
+  },
+  {
+   "w": "%",
+   "start": 54.76,
+   "end": 55.16
+  },
+  {
+   "w": "human.",
+   "start": 55.16,
+   "end": 55.58
+  },
+  {
+   "w": "Make",
+   "start": 55.8,
+   "end": 55.94
+  },
+  {
+   "w": "sure",
+   "start": 55.94,
+   "end": 56.14
+  },
+  {
+   "w": "you",
+   "start": 56.14,
+   "end": 56.28
+  },
+  {
+   "w": "follow",
+   "start": 56.28,
+   "end": 56.54
+  },
+  {
+   "w": "Insider",
+   "start": 56.54,
+   "end": 57.08
+  },
+  {
+   "w": "Force.",
+   "start": 57.08,
+   "end": 57.36
+  },
+  {
+   "w": "The",
+   "start": 57.36,
+   "end": 57.8
+  },
+  {
+   "w": "system",
+   "start": 57.8,
+   "end": 58.1
+  },
+  {
+   "w": "only",
+   "start": 58.1,
+   "end": 58.46
+  },
+  {
+   "w": "sends",
+   "start": 58.46,
+   "end": 58.74
+  },
+  {
+   "w": "it",
+   "start": 58.74,
+   "end": 58.9
+  },
+  {
+   "w": "to",
+   "start": 58.9,
+   "end": 59.0
+  },
+  {
+   "w": "followers.",
+   "start": 59.0,
+   "end": 59.32
+  }
+ ]
+}

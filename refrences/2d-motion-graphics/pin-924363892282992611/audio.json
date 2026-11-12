@@ -1,0 +1,56 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -14.3,
+  "tempo_estimate_bpm": 170.5,
+  "tempo_confidence_0_1": 0.03,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "en",
+  "whisper_language_prob": 0.98,
+  "speech_seconds_vad": 18.0,
+  "speech_fraction": 0.93,
+  "transcript_segments": [
+    {
+      "start": 0.02,
+      "end": 3.02,
+      "text": "Ever wondered why some brands just stick in your mind?",
+      "no_speech_prob": 0.16,
+      "avg_logprob": -0.12
+    },
+    {
+      "start": 3.02,
+      "end": 6.02,
+      "text": "It's no accident. It's the power of motion design.",
+      "no_speech_prob": 0.16,
+      "avg_logprob": -0.12
+    },
+    {
+      "start": 6.02,
+      "end": 8.02,
+      "text": "Motion brings feeling to your story.",
+      "no_speech_prob": 0.16,
+      "avg_logprob": -0.12
+    },
+    {
+      "start": 8.02,
+      "end": 11.02,
+      "text": "Animated text captures eyes instantly.",
+      "no_speech_prob": 0.16,
+      "avg_logprob": -0.12
+    },
+    {
+      "start": 11.02,
+      "end": 15.02,
+      "text": "Visual metaphors make complicated concepts clear silently.",
+      "no_speech_prob": 0.16,
+      "avg_logprob": -0.12
+    },
+    {
+      "start": 15.02,
+      "end": 18.02,
+      "text": "This isn't decoration. It's strategic movement.",
+      "no_speech_prob": 0.16,
+      "avg_logprob": -0.12
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}

@@ -18,6 +18,11 @@ Never modify files in `raw-footags/`; write results to `outputs/`. Never commit 
 - Ending: "Shop certified refurbished laptops and desktops at ZELECTRONICS." (CTA scene S10 with laptop/desktop tiles, then end card).
 - Audio: tools/make_audio.py assets/vo-friday-v2.mp3 assets/audio.wav (VO at +0.2 s; all cue times come from a whisper transcript of the VO and must match index.html).
 
+## Project: script 4 video, "Refurbished isn't used" (projects/zelectronics-script4-refurbished)
+- 2D motion graphics in the style of refrences/2d-motion-graphics; script: projects/zelectronics-motion-scripts/scripts.md (script 4, draft 5). VO: voice/zelectronics-script-4.mp3 (user's), at +0.2 s.
+- User-set palette for this video (exception to strict B&W): bg #F1E9D8, graphics #D8BD8A / #B18A45, primary text #111111. Six-month warranty; laptops tested before shipping.
+- v1: outputs/zelectronics-script4-refurbished-v1-20s.mp4. Audio: tools/make_audio.py (cue times must match index.html).
+
 ## Project: Pukhtoon restaurant reel (raw-footags/pakhtoon-vid-1, plan: projects/pakhtoon-vid-1/edit-plan.md)
 - Restaurant is "Pukhtoon" (menu logo "p♥khtoon Restaurant", heart as the "u"), inside The Caliph hotel (sign: "THE CALIPH").
 - 12 clips, 4K vertical, mostly 24 fps (C075/C096 are 30 fps), daylight, no people except one hand. Style references: refrences/trending-restraunt-reels/.
