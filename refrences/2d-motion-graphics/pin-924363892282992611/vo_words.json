@@ -1,0 +1,220 @@
+{
+ "model": "faster-whisper small int8",
+ "words": [
+  {
+   "w": "Ever",
+   "start": 0.0,
+   "end": 0.54
+  },
+  {
+   "w": "wondered",
+   "start": 0.54,
+   "end": 0.88
+  },
+  {
+   "w": "why",
+   "start": 0.88,
+   "end": 1.14
+  },
+  {
+   "w": "some",
+   "start": 1.14,
+   "end": 1.34
+  },
+  {
+   "w": "brands",
+   "start": 1.34,
+   "end": 1.8
+  },
+  {
+   "w": "just",
+   "start": 1.8,
+   "end": 2.04
+  },
+  {
+   "w": "stick",
+   "start": 2.04,
+   "end": 2.3
+  },
+  {
+   "w": "in",
+   "start": 2.3,
+   "end": 2.44
+  },
+  {
+   "w": "your",
+   "start": 2.44,
+   "end": 2.54
+  },
+  {
+   "w": "mind?",
+   "start": 2.54,
+   "end": 2.86
+  },
+  {
+   "w": "It's",
+   "start": 3.42,
+   "end": 3.58
+  },
+  {
+   "w": "no",
+   "start": 3.58,
+   "end": 3.7
+  },
+  {
+   "w": "accident.",
+   "start": 3.7,
+   "end": 4.02
+  },
+  {
+   "w": "It's",
+   "start": 4.64,
+   "end": 4.84
+  },
+  {
+   "w": "the",
+   "start": 4.84,
+   "end": 4.94
+  },
+  {
+   "w": "power",
+   "start": 4.94,
+   "end": 5.2
+  },
+  {
+   "w": "of",
+   "start": 5.2,
+   "end": 5.34
+  },
+  {
+   "w": "motion",
+   "start": 5.34,
+   "end": 5.6
+  },
+  {
+   "w": "design.",
+   "start": 5.6,
+   "end": 6.0
+  },
+  {
+   "w": "Motion",
+   "start": 6.5,
+   "end": 6.86
+  },
+  {
+   "w": "brings",
+   "start": 6.86,
+   "end": 7.28
+  },
+  {
+   "w": "feeling",
+   "start": 7.28,
+   "end": 7.68
+  },
+  {
+   "w": "to",
+   "start": 7.68,
+   "end": 7.9
+  },
+  {
+   "w": "your",
+   "start": 7.9,
+   "end": 8.04
+  },
+  {
+   "w": "story.",
+   "start": 8.04,
+   "end": 8.38
+  },
+  {
+   "w": "Animated",
+   "start": 8.74,
+   "end": 9.18
+  },
+  {
+   "w": "text",
+   "start": 9.18,
+   "end": 9.48
+  },
+  {
+   "w": "captures",
+   "start": 9.48,
+   "end": 9.88
+  },
+  {
+   "w": "eyes",
+   "start": 9.88,
+   "end": 10.28
+  },
+  {
+   "w": "instantly.",
+   "start": 10.28,
+   "end": 10.74
+  },
+  {
+   "w": "Visual",
+   "start": 11.28,
+   "end": 11.6
+  },
+  {
+   "w": "metaphors",
+   "start": 11.6,
+   "end": 12.26
+  },
+  {
+   "w": "make",
+   "start": 12.26,
+   "end": 12.44
+  },
+  {
+   "w": "complicated",
+   "start": 12.44,
+   "end": 13.04
+  },
+  {
+   "w": "concepts",
+   "start": 13.04,
+   "end": 13.5
+  },
+  {
+   "w": "clear",
+   "start": 13.5,
+   "end": 14.0
+  },
+  {
+   "w": "silently.",
+   "start": 14.0,
+   "end": 14.52
+  },
+  {
+   "w": "This",
+   "start": 15.12,
+   "end": 15.28
+  },
+  {
+   "w": "isn't",
+   "start": 15.28,
+   "end": 15.58
+  },
+  {
+   "w": "decoration.",
+   "start": 15.58,
+   "end": 15.96
+  },
+  {
+   "w": "It's",
+   "start": 16.6,
+   "end": 16.82
+  },
+  {
+   "w": "strategic",
+   "start": 16.82,
+   "end": 17.22
+  },
+  {
+   "w": "movement.",
+   "start": 17.22,
+   "end": 17.64
+  }
+ ]
+}

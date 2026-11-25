@@ -1,0 +1,42 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -14.5,
+  "tempo_estimate_bpm": 117.2,
+  "tempo_confidence_0_1": 0.1,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "en",
+  "whisper_language_prob": 0.98,
+  "speech_seconds_vad": 17.6,
+  "speech_fraction": 0.99,
+  "transcript_segments": [
+    {
+      "start": 0.0,
+      "end": 5.12,
+      "text": "you've got the ideas and content but your growth still stuck because content without an audience is",
+      "no_speech_prob": 0.31,
+      "avg_logprob": -0.17
+    },
+    {
+      "start": 5.12,
+      "end": 10.48,
+      "text": "just noise and the audience is the real money no eyeballs no impact no earnings instagram doesn't",
+      "no_speech_prob": 0.31,
+      "avg_logprob": -0.17
+    },
+    {
+      "start": 10.48,
+      "end": 16.24,
+      "text": "reward effort it rewards strategy i deliver that strategy your content's working hard but not smart",
+      "no_speech_prob": 0.31,
+      "avg_logprob": -0.17
+    },
+    {
+      "start": 16.24,
+      "end": 17.6,
+      "text": "hit the dm button fix that",
+      "no_speech_prob": 0.31,
+      "avg_logprob": -0.17
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}

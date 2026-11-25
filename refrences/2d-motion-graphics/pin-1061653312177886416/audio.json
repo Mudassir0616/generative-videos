@@ -1,0 +1,63 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -14.9,
+  "tempo_estimate_bpm": 156.2,
+  "tempo_confidence_0_1": 0.08,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "en",
+  "whisper_language_prob": 0.99,
+  "speech_seconds_vad": 32.0,
+  "speech_fraction": 0.89,
+  "transcript_segments": [
+    {
+      "start": 0.0,
+      "end": 5.0,
+      "text": "If you're comparing us with other agencies, we're probably not in the same category.",
+      "no_speech_prob": 0.2,
+      "avg_logprob": -0.11
+    },
+    {
+      "start": 5.0,
+      "end": 13.0,
+      "text": "Agencies usually compete on deliverables, number of posts, ad budgets, campaign execution.",
+      "no_speech_prob": 0.2,
+      "avg_logprob": -0.11
+    },
+    {
+      "start": 13.0,
+      "end": 16.0,
+      "text": "But most growth problems don't live there.",
+      "no_speech_prob": 0.2,
+      "avg_logprob": -0.11
+    },
+    {
+      "start": 16.0,
+      "end": 23.0,
+      "text": "They live inside the business, demand clarity, conversion systems, customer ownership.",
+      "no_speech_prob": 0.2,
+      "avg_logprob": -0.11
+    },
+    {
+      "start": 23.0,
+      "end": 27.0,
+      "text": "When those are unclear, better marketing doesn't solve the problem.",
+      "no_speech_prob": 0.2,
+      "avg_logprob": -0.11
+    },
+    {
+      "start": 27.0,
+      "end": 29.0,
+      "text": "It just exposes it.",
+      "no_speech_prob": 0.2,
+      "avg_logprob": -0.11
+    },
+    {
+      "start": 29.0,
+      "end": 32.0,
+      "text": "That's why we're not competing for the same work.",
+      "no_speech_prob": 0.01,
+      "avg_logprob": -0.05
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}

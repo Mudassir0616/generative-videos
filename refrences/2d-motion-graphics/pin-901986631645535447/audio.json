@@ -1,0 +1,175 @@
+{
+  "has_audio": true,
+  "integrated_lufs": -12.8,
+  "tempo_estimate_bpm": 70.8,
+  "tempo_confidence_0_1": 0.08,
+  "tempo_note": "autocorrelation of spectral-flux onsets; may be half/double the felt tempo",
+  "whisper_language": "en",
+  "whisper_language_prob": 1.0,
+  "speech_seconds_vad": 57.8,
+  "speech_fraction": 0.95,
+  "transcript_segments": [
+    {
+      "start": 0.0,
+      "end": 3.48,
+      "text": "Three Claude code skills that make you look like a designer overnight.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 3.48,
+      "end": 4.84,
+      "text": "First, Taste Skill.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 4.84,
+      "end": 7.24,
+      "text": "AI interfaces all have the same tell.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 7.24,
+      "end": 11.24,
+      "text": "Same fonts, same gradients, same a machine made this energy.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 11.24,
+      "end": 13.44,
+      "text": "Taste Skill fixes the root cause.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 13.44,
+      "end": 15.68,
+      "text": "It gives Claude an actual aesthetic opinion.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 15.68,
+      "end": 18.32,
+      "text": "So what comes out looks like a human designer touched it.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 18.32,
+      "end": 20.8,
+      "text": "Second, Emil Kowalski's Motion Skill.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 20.8,
+      "end": 24.76,
+      "text": "Static UIs feel flat because nothing moves, nothing responds.",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 24.76,
+      "end": 28.72,
+      "text": "One command and Claude starts adding real motion, intentional easing,",
+      "no_speech_prob": 0.1,
+      "avg_logprob": -0.16
+    },
+    {
+      "start": 28.72,
+      "end": 32.56,
+      "text": "animations that actually make sense, interfaces that feel alive.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 32.56,
+      "end": 34.0,
+      "text": "Third, Impeccable.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 34.0,
+      "end": 38.12,
+      "text": "20 commands covering typography, color, spacing, and layout.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 38.12,
+      "end": 40.84,
+      "text": "A complete design system handed to Claude at once.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 40.84,
+      "end": 42.8,
+      "text": "Run slash polish before you ship.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 42.8,
+      "end": 44.8,
+      "text": "And Claude sweeps your entire UI,",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 44.8,
+      "end": 47.04,
+      "text": "tightening every loose detail automatically.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 47.04,
+      "end": 48.2,
+      "text": "Comment, human.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 48.2,
+      "end": 49.48,
+      "text": "And I'll send you my e-book.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 49.48,
+      "end": 51.44,
+      "text": "They will never know AI wrote it.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 51.44,
+      "end": 55.84,
+      "text": "A simple step-by-step guide to make AI copies sound 100% human.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 55.84,
+      "end": 57.76,
+      "text": "Make sure you follow insider force.",
+      "no_speech_prob": 0.02,
+      "avg_logprob": -0.13
+    },
+    {
+      "start": 57.76,
+      "end": 59.8,
+      "text": "The system only sends it to followers.",
+      "no_speech_prob": 0.56,
+      "avg_logprob": -0.35
+    }
+  ],
+  "transcript_note": "Whisper output after VAD; low avg_logprob or high no_speech_prob usually means lyrics/noise, not voiceover"
+}
