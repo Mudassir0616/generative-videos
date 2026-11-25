@@ -79,3 +79,25 @@ detail lives next to the code (script.md, edit-plan.md, analysis.md). Newest wor
 - Earlier commits already contain some media now covered by `.gitignore` (the IShowSpeed raw clip, ZELECTRONICS renders and audio, `.hyperframes` state). Those stay tracked until someone runs `git rm --cached` on them; that's the user's decision.
 - `outputs/zelectronics-refurb-laptops-draft1.mp4` and `outputs/ishowspeed-leon-reaction-9x16-cutout-33s.mp4` were deleted from disk by the user. Their deletion is not committed yet.
 - **Rule from the user:** never commit or push unless explicitly asked.
+
+## 2026-11-25: Super Deluxe Room tour for The Caliph (projects/caliph-super-deluxe-tour)
+- Raw: `raw-footags/rooms/super-deluxe-tour.mp4` (720x1280, 24 fps, 30.21 s, silent). It is 5 gimbal shots of 6.04 s each (cuts at 6.04/12.08/18.13/24.17): door reveal, bed→desk pan, headboard close-up, desk/TV pan, vanity + mini-fridge.
+- Brief from the user: no voiceover, little on-screen text, slow transitions. Room facts are from thecaliphhotel.com/room/super-deluxe-room-2.
+- `script.md` has:
+  - the shot breakdown;
+  - a ~30 s timeline with 1 s cross-dissolves;
+  - one headline (+ optional sub-line) per shot;
+  - a "Book your stay" end card;
+  - a look that matches the Pukhtoon reel (Caliph logo top centre).
+- Left out on purpose: the bathroom, bathtub and living room (not filmed), and the site's "310 m²" (probably a typo).
+- **User decisions:**
+  - no prices;
+  - the front-desk number +91 91677 55777 on the end card;
+  - the 720p file is the only source, so enhance it;
+  - "use any calm instrumental".
+- **Built:**
+  - `tools/build_base.py` enhances the footage (nlmeans denoise, deband, lanczos upscale to 1080x1920, CAS sharpen, light eq), joins the shots with 1 s dissolves and holds a blurred last frame under the end card.
+  - `tools/make_music.py` synthesizes an original D-major felt-piano + pad track; chords change every 2.52 s, so each dissolve midpoint lands on a chord change.
+  - `index.html` adds the Caliph logo at top 170 px, one text card per shot and the end card.
+- **Delivered:** `outputs/caliph-super-deluxe-room-tour-30s.mp4` (30.0 s, 1080x1920, 24 fps, -16.2 LUFS).
+- **Not verified by ear:** the music. The user should listen to it.

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <!-- The Caliph: Super Deluxe Room tour. Script: script.md. Base picture: tools/build_base.py. Music: tools/make_music.py -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "GreatVibes"; src: url("assets/fonts/GreatVibes-Regular.ttf") format("truetype"); font-display: block; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 1080px; height: 1920px; background: #000; --gold: #bb8d28; --ink: #fff8ec; }
+      .clip { position: absolute; inset: 0; }
+      #base { width: 1080px; height: 1920px; object-fit: cover; }
+
+      /* same soft top gradient + full Caliph logo as the Pukhtoon reel */
+      #scrim { position: absolute; left: 0; right: 0; top: 0; height: 720px;
+               background: linear-gradient(180deg, rgba(18, 10, 3, 0.6) 0%, rgba(18, 10, 3, 0.38) 42%, rgba(18, 10, 3, 0) 100%); }
+      #logo { position: absolute; left: 50%; top: 170px; width: 500px; margin-left: -250px;
+              filter: drop-shadow(0 3px 10px rgba(15, 8, 2, 0.55)) drop-shadow(0 0 2px rgba(15, 8, 2, 0.4)); }
+
+      /* one text card per shot, lower-middle (inside the 168-1330 px safe band) */
+      .card { position: absolute; left: 0; right: 0; top: 1010px; height: 320px; opacity: 0;
+              display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+      .card .glow { position: absolute; left: 50%; top: 50%; width: 1100px; height: 560px; margin: -280px 0 0 -550px;
+                    background: radial-gradient(ellipse at center, rgba(22, 12, 4, 0.5) 0%, rgba(22, 12, 4, 0.28) 38%, rgba(22, 12, 4, 0) 70%); }
+      .head { position: relative; font-family: "EB Garamond", serif; font-weight: 500; font-size: 84px; line-height: 1.05; color: var(--ink);
+              letter-spacing: 0.005em; text-shadow: 0 2px 18px rgba(25, 14, 4, 0.55), 0 1px 3px rgba(25, 14, 4, 0.45); }
+      .head.script { font-family: "GreatVibes", cursive; font-weight: 400; font-size: 150px; line-height: 1.1; padding: 0 0.3em; }
+      .rule { position: relative; width: 56px; height: 3px; margin: 30px 0 26px; background: var(--gold); border-radius: 2px; }
+      .sub { position: relative; font-family: "Montserrat", sans-serif; font-weight: 500; font-size: 36px; line-height: 1.3; color: rgba(255, 248, 236, 0.92);
+             letter-spacing: 0.04em; text-shadow: 0 2px 12px rgba(25, 14, 4, 0.6), 0 1px 3px rgba(25, 14, 4, 0.5); }
+
+      /* end card: darkening over the blurred last frame, then the call to action centred */
+      #dim { position: absolute; inset: 0; background: rgba(16, 9, 3, 0.32); opacity: 0; }
+      #end { top: 800px; height: 420px; }
+      #end .head { font-size: 112px; }
+      #end .sub { font-size: 40px; line-height: 1.45; }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-k39q" id="root" data-composition-id="main" data-start="0" data-duration="30" data-fps="24" data-width="1080" data-height="1920">
+      <video data-hf-id="hf-b9e4" id="base" class="clip" src="assets/base.mp4" data-start="0" data-duration="30" data-track-index="0" muted playsinline></video>
+
+      <div data-hf-id="hf-56x3" id="overlay" class="clip" data-start="0" data-duration="30" data-track-index="1" data-track-kind="graphics">
+        <div data-hf-id="hf-wmg9" id="scrim"></div>
+        <div data-hf-id="hf-6pf9" id="dim"></div>
+        <img data-hf-studio-original-inline-translate="" data-hf-studio-original-display="" data-hf-studio-original-box-sizing="" data-hf-studio-original-flex-shrink="" data-hf-studio-original-flex-grow="" data-hf-studio-original-flex-basis="" data-hf-studio-original-max-height="" data-hf-studio-original-max-width="" data-hf-studio-original-min-height="" data-hf-studio-original-min-width="" data-hf-studio-original-box-height="318" data-hf-studio-original-box-width="500" data-hf-studio-original-height="" data-hf-studio-original-width="" data-hf-studio-box-size="true" style="--hf-studio-width: 410px; --hf-studio-height: 261px; width: 410px; height: 261px; min-width: 0px; min-height: 0px; max-width: none; max-height: none; box-sizing: border-box; translate: 45px -71px" data-hf-id="hf-y0e1" id="logo" src="assets/caliph-logo-full.png" alt="The Caliph Hotels & Executive Suites">
+
+        <div data-hf-id="hf-gywh" id="c1" class="card" data-layout-allow-overflow=""><div data-hf-id="hf-2s7n" class="glow"></div>
+          <div data-hf-id="hf-n7z4" class="head script">Super Deluxe Room</div><div data-hf-id="hf-a46i" class="rule"></div>
+          <div data-hf-id="hf-1qri" class="sub">The Caliph · Powai, Mumbai</div></div>
+        <div data-hf-id="hf-uq9n" id="c2" class="card"><div data-hf-id="hf-x5mb" class="glow"></div>
+          <div data-hf-id="hf-5z2t" class="head">King-size comfort</div><div data-hf-id="hf-ya9a" class="rule"></div>
+          <div data-hf-id="hf-ona3" class="sub">Full blackout curtains</div></div>
+        <div data-hf-id="hf-okju" id="c3" class="card"><div data-hf-id="hf-wrba" class="glow"></div>
+          <div data-hf-id="hf-itg9" class="head">Crafted in detail</div></div>
+        <div data-hf-id="hf-80fx" id="c4" class="card"><div data-hf-id="hf-wd09" class="glow"></div>
+          <div data-hf-id="hf-12j1" class="head">Everything within reach</div><div data-hf-id="hf-yokb" class="rule"></div>
+          <div data-hf-id="hf-foby" class="sub">Work desk · Tea &amp; coffee · Flat-screen TV</div></div>
+        <div data-hf-id="hf-78s4" id="c5" class="card"><div data-hf-id="hf-vyp8" class="glow"></div>
+          <div data-hf-id="hf-9fms" class="head">Vanity &amp; mini-fridge</div><div data-hf-id="hf-z2vc" class="rule"></div>
+          <div data-hf-id="hf-m4cu" class="sub">Complimentary breakfast at Pukhtoon</div></div>
+        <div data-hf-id="hf-shv3" id="end" class="card"><div data-hf-id="hf-vke7" class="glow"></div>
+          <div data-hf-id="hf-dhin" class="head">Book Your Stay</div><div data-hf-id="hf-waq5" class="rule"></div>
+          <div data-hf-id="hf-b8yf" class="sub">thecaliphhotel.com<br data-hf-id="hf-x5px">Front desk +91 91677 55777</div></div>
+      </div>
+
+      <audio data-hf-id="hf-f6nb" id="music" src="assets/music.wav" data-start="0" data-duration="30" data-volume="1" data-track-index="2"></audio>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const IN = 0.7, OUT = 0.5;
+
+      // a card rises in softly (head, then gold rule, then sub-line) and fades out before the next dissolve
+      function card(id, tIn, tOut) {
+        const s = "#" + id;
+        tl.set(s, { opacity: 1 }, tIn);
+        tl.fromTo(s + " .glow", { opacity: 0 }, { opacity: 1, duration: IN + 0.3, ease: "sine.out" }, tIn);
+        tl.fromTo(s + " .head", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: IN, ease: "power2.out" }, tIn);
+        if (document.querySelector(s + " .rule")) tl.fromTo(s + " .rule", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, tIn + 0.25);
+        if (document.querySelector(s + " .sub")) tl.fromTo(s + " .sub", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: IN, ease: "power2.out" }, tIn + 0.35);
+        if (tOut != null) tl.to(s, { opacity: 0, y: -8, duration: OUT, ease: "power1.in" }, tOut);
+      }
+
+      // shot 1 is the thumbnail: the title is already on screen at frame 0
+      tl.set("#c1", { opacity: 1 }, 0);
+      tl.set("#c1 .glow, #c1 .head", { opacity: 1 }, 0);
+      tl.fromTo("#c1 .head", { scale: 0.985 }, { scale: 1, duration: 4.2, ease: "sine.out" }, 0);
+      tl.fromTo("#c1 .rule", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.out" }, 0.3);
+      tl.fromTo("#c1 .sub", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: IN, ease: "power2.out" }, 0.45);
+      tl.to("#c1", { opacity: 0, y: -8, duration: OUT, ease: "power1.in" }, 4.1);
+
+      // dissolves (base.mp4): 5.04-6.04, 10.08-11.08, 15.13-16.13, 20.17-21.17; end-card blur 25.0-26.0
+      card("c2", 6.4, 9.5);
+      card("c3", 11.4, 14.5);
+      card("c4", 16.5, 19.6);
+      card("c5", 21.5, 24.3);
+      tl.to("#dim", { opacity: 1, duration: 1.0, ease: "sine.inOut" }, 25.0);
+      card("end", 25.5, null);
+      tl.to("#end", { opacity: 1, duration: 0.01 }, 29.98);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

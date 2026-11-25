@@ -26,6 +26,11 @@ Never modify files in `raw-footags/`; write results to `outputs/`. Never commit 
 - v1 = 15.04 s fast cut (removed from outputs/ by the user; rebuildable); v2 = 20.21 s slower cut, user's preferred pace (outputs/pukhtoon-caliph-reel-v2-20s.mp4).
 - Rebuild a version: `python tools/build_base.py render assets/base-vN.mp4 vN` (cut list + grade), `python tools/make_comp.py vN` (writes index.html), then `npx hyperframes render --fps 24 --quality delivery` (Node 22 + ffmpeg on PATH).
 
+## Project: Super Deluxe Room tour for The Caliph (projects/caliph-super-deluxe-tour)
+- Source: raw-footags/rooms/super-deluxe-tour.mp4 (720p only, 5 shots of 145 frames). No VO.
+- On screen: one short text card per shot plus a "Book your stay" end card (thecaliphhotel.com, front desk +91 91677 55777). No prices (user's rule). Script: script.md.
+- Rebuild: `python tools/build_base.py` (enhance + dissolves), `python tools/make_music.py` (original synthesized music), then `npx hyperframes render --fps 24 --quality delivery`.
+
 ## Tools
 Machine notes (Mudassir's Windows 10 PC, as of 2026-11-08): no WSL distro and no system ffmpeg/yt-dlp/gh. Portable installs: Node 22 at `%LOCALAPPDATA%\Programs\node22`, FFmpeg 9 at `%LOCALAPPDATA%\Programs\ffmpeg\bin`; prepend both to PATH before HyperFrames or ffmpeg work. Python 3.13 has no numpy/faster-whisper/yt-dlp installed: `pip install numpy faster-whisper yt-dlp` (or `pip install --target <dir>`). Git Bash curl fails TLS here; use PowerShell `Invoke-WebRequest` for downloads. The ElevenLabs MCP's free tier is disabled for this account, so new VO must come from the user. Headless Chrome (`tools/seek_snapshot.py`) can screenshot a composition without HyperFrames.
 - **FFmpeg** (`ffmpeg`, `ffprobe`; v9 on the Windows PC): cut, trim, convert, process.

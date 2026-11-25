@@ -14,12 +14,17 @@ projects/*/renders/
 # Pukhtoon: tools/build_base.py -> base-vN.mp4, music trims from voice/restraunt/
 projects/pakhtoon-vid-1/assets/base-*.mp4
 projects/pakhtoon-vid-1/assets/music-*.wav
+# Caliph room tour: tools/build_base.py -> base.mp4, tools/make_music.py -> music.wav
+projects/caliph-super-deluxe-tour/assets/base.mp4
+projects/caliph-super-deluxe-tour/assets/music.wav
 # ZELECTRONICS: tools/make_audio.py -> audio.wav
 projects/*/assets/audio.wav
 *.tmp.wav
 
-# --- HyperFrames local state, snapshots, check reports ---
+# --- HyperFrames local state, snapshots, check reports, Studio thumbnail/waveform caches ---
 **/.hyperframes/
+**/.thumbnails/
+**/.waveform-cache/
 
 # --- third-party content (other people's reels, commercial music) ---
 refrences/**/*.mp4
